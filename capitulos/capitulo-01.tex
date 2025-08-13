@@ -1,0 +1,25 @@
+\chapter{Introdução}\label{cap:introducao}
+A compressão de dados é essencial para minimizar custos de armazenamento e transmissão, reduzindo o volume de dados sem comprometer o entendimento da informação. No caso da compressão sem perdas, segundo a teoria de Shannon, a entropia da fonte estabelece o limite inferior para a taxa média de bits de qualquer esquema de compressão~\cite{mackay2003information}. Para aproximar-se desse limite teórico, algoritmos de compressão combinam técnicas de dicionário e codificação estatísticas.
+
+Na prática, formatos de compressão amplamente utilizados empregam essa abordagem híbrida. Por exemplo, o algoritmo DEFLATE, utilizado no formato ZIP, aplica LZ77 em conjunto com a codificação de Huffman para obter compressões melhores. Essa combinação explora tanto os padrões repetitivos de longo alcance quanto as probabilidades de ocorrência dos símbolos, elevando a eficiência global do método \cite{rfc1951}.
+
+De modo geral, os algoritmos de compressão sem perdas dividem-se em métodos de codificação estatística e métodos de dicionário \cite{sayood2012introduction}. Por exemplo, a codificação de Huffman e a codificação aritmética são técnicas estatísticas, a ultima capaz de representar toda a mensagem como um único número fracionário no intervalo $[0, 1[$, alcançando compressões muito próximas do limite de entropia. Por sua vez, os métodos de dicionário exploram redundâncias substituindo sequências repetitivas por referências a ocorrências anteriores já vistas: um dos mais conhecidos é o algoritmo LZ77, proposto por Ziv e Lempel\cite{1055714}, que implementa esse princípio construindo dinamicamente um ``dicionário'' de padrões enquanto lê os dados.
+
+Apesar do uso disseminado dessas técnicas em aplicações, a biblioteca de código aberto Komm não dispunha até o momento de uma implementação do LZ77 e nem de codificação aritmética. Essa biblioteca voltada ao ensino e à simulação em comunicação digital, já inclui diversos algoritmos clássicos de compressão, como os código de Huffman, Shannon--Fano e LZ78, evidenciando a relevância de incorporar as técnicas LZ77 e codificação aritmética para torná-la mais completa. Portanto, este trabalho tem como objetivo desenvolver e integrar um versão do LZ77 e um codificador aritmético na biblioteca Komm, avaliando estes algoritmos em termos de taxa de compressão, tempo de processamento e uso de memória.
+
+\section{Objetivo geral}
+Expandir as capacidades da biblioteca Komm com a implementação dos algoritmos LZ77 e codificação aritmética.
+
+\section{Objetivos Especificos}
+\begin{itemize}
+    \item  Projetar e desenvolver módulos da codificação LZ77 na arquitetura da Komm, observando padrões de codificação e cobertura de testes e escrita da documentação.
+   
+    \item  Projetar e desenvolver módulos da codificação aritmética na arquitetura da Komm, observando padrões de codificação e cobertura de testes e escrita da documentação.
+        
+    \item Validar a compressão e descompressão em arquivos de textos e imagens, assegurando corretude e integridade.
+    
+    \item Realizar análise comparativa de desempenho (taxa de compressão, tempo de execução e uso de memória) em relação a Huffman, LZ78 e LZW.
+
+\end{itemize}
+\section{Organização do Texto}
+A ser decidido conforme escrito o TCC
