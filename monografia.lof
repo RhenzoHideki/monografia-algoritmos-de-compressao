@@ -1,14 +1,14 @@
 \babel@toc {brazil}{}\relax 
 \babel@toc {brazil}{}\relax 
-\contentsline {figure}{\numberline {1}{\ignorespaces Divisão da janela deslizante no algoritmo LZ77}}{18}{figure.caption.18}%
-\contentsline {figure}{\numberline {2}{\ignorespaces Estado inicial da janela deslizante no algoritmo LZ77}}{18}{figure.caption.19}%
-\contentsline {figure}{\numberline {3}{\ignorespaces Estado da janela após primeira codificação no algoritmo LZ77}}{19}{figure.caption.20}%
-\contentsline {figure}{\numberline {4}{\ignorespaces Decodificação do exemplo $\langle 7, 4, \texttt {r} \rangle $ }}{20}{figure.caption.21}%
-\contentsline {figure}{\numberline {5}{\ignorespaces Codificação da palavra \texttt {"cba"} utilizando codificação aritmética}}{23}{figure.caption.22}%
-\contentsline {figure}{\numberline {6}{\ignorespaces Codificação da palavra \texttt {"cba"} em bits}}{24}{figure.caption.23}%
-\contentsline {figure}{\numberline {7}{\ignorespaces Operação geral de redimensionamento na codificação aritmética}}{26}{figure.caption.24}%
-\contentsline {figure}{\numberline {8}{\ignorespaces Redimensionamento quando \( b < \frac {1}{2} \)}}{27}{figure.caption.25}%
-\contentsline {figure}{\numberline {9}{\ignorespaces Redimensionamento quando \( a \geq \frac {1}{2} \)}}{27}{figure.caption.26}%
-\contentsline {figure}{\numberline {10}{\ignorespaces Redimensionamento quando o intervalo está na metade central \( \frac {1}{4} \leq a < b < \frac {3}{4} \)}}{27}{figure.caption.27}%
-\contentsline {figure}{\numberline {11}{\ignorespaces Subdivisão específica em \( \frac {3}{4} \)}}{27}{figure.caption.28}%
-\contentsline {figure}{\numberline {12}{\ignorespaces Subdivisão específica em \( \frac {1}{4} \)}}{28}{figure.caption.29}%
+\contentsline {figure}{\numberline {1}{\ignorespaces Divisão da janela deslizante no algoritmo LZ77}}{16}{figure.caption.14}%
+\contentsline {figure}{\numberline {2}{\ignorespaces Estado inicial da janela deslizante no algoritmo LZ77}}{16}{figure.caption.15}%
+\contentsline {figure}{\numberline {3}{\ignorespaces Estado da janela após primeira codificação no algoritmo LZ77}}{17}{figure.caption.16}%
+\contentsline {figure}{\numberline {4}{\ignorespaces Decodificação do exemplo $\langle 7, 4, \texttt {r} \rangle $ }}{18}{figure.caption.17}%
+\contentsline {figure}{\numberline {5}{\ignorespaces Codificação da palavra \texttt {"cba"} utilizando codificação aritmética}}{21}{figure.caption.18}%
+\contentsline {figure}{\numberline {6}{\ignorespaces Codificação da palavra \texttt {"cba"} em bits}}{22}{figure.caption.19}%
+\contentsline {figure}{\numberline {7}{\ignorespaces Operação geral de redimensionamento na codificação aritmética}}{24}{figure.caption.20}%
+\contentsline {figure}{\numberline {8}{\ignorespaces Redimensionamento quando \( b < \frac {1}{2} \)}}{25}{figure.caption.21}%
+\contentsline {figure}{\numberline {9}{\ignorespaces Redimensionamento quando \( a \geq \frac {1}{2} \)}}{25}{figure.caption.22}%
+\contentsline {figure}{\numberline {10}{\ignorespaces Redimensionamento quando o intervalo está na metade central \( \frac {1}{4} \leq a < b < \frac {3}{4} \)}}{25}{figure.caption.23}%
+\contentsline {figure}{\numberline {11}{\ignorespaces Subdivisão específica em \( \frac {3}{4} \)}}{25}{figure.caption.24}%
+\contentsline {figure}{\numberline {12}{\ignorespaces Subdivisão específica em \( \frac {1}{4} \)}}{26}{figure.caption.25}%
