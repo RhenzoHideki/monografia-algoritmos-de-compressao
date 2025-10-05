@@ -1,157 +1,120 @@
 \chapter{Desenvolvimento}\label{cap:desenvolvimento}
 
-Este capítulo apresenta como foi o desenvolvimento dos módulos LZ77 e
-codificação aritmética na biblioteca Komm. A liguagem escolhida foi Python, a
-qual é utilizada na Komm
+Este capítulo descreve o desenvolvimento dos módulos LZ77 e codificação
+aritmética na biblioteca \textit{Komm}. A implementação foi realizada em
+Python, linguagem-base do projeto.
 
-\section{Modulo LZ77}
-Este seção descreve a implementação do algoritmo \textit{LZ77} na biblioteca
-\textit{Komm}, detalhando o processo de projeto, integração e validação do
-código. O objetivo é apresentar a contribuição prática deste trabalho,
-demonstrando como o algoritmo foi estruturado e adaptado ao padrão da
-biblioteca.
+\section{Módulo LZ77}
 
-A biblioteca \textit{Komm} já dispõe de diversos algoritmos de compressão sem
-perdas, como \textit{Huffman}, \textit{Tunstall}, \textit{Lempel-Ziv 78} (LZ78)
-e \textit{Lempel-Ziv-Welch} (LZW). Entretanto, não havia uma implementação
-disponível para o algoritmo \textit{Lempel-Ziv 77} (LZ77), que é um dos métodos
-clássicos de compressão baseada em dicionário. Assim, a contribuição deste
-trabalho consistiu no desenvolvimento completo do LZ77, incluindo:
+Esta seção documenta a implementação do algoritmo \textit{Lempel–Ziv 77} (LZ77)
+na \textit{Komm}, cobrindo decisões de projeto, integração e validação. A
+biblioteca já inclui diversos esquemas de compressão sem perdas (Huffman,
+Tunstall, LZ78 e LZW), e a contribuição aqui foi a implementação completa do
+LZ77 com foco tanto prático quanto didático.
+
+\subsection{Objetivos e escopo}
+
+Os objetivos deste módulo foram:
 \begin{itemize}
-    \item Desenvolvimento das rotinas de codificação (\texttt{encode}) e decodificação
-          (\texttt{decode}) baseadas em triplos $\langle o, l, c \rangle$;
-    \item Integração com a estrutura da biblioteca \textit{Komm};
-    \item Elaboração de testes unitários para validação da corretude.
-    \item Documentação e padronização segundo o estilo da biblioteca;
+    \item implementar as rotinas de codificação (\texttt{encode}) e decodificação
+          (\texttt{decode}) gerando \textbf{tokens} no formato \((p,\ell,x)\);
+    \item integrar a classe ao padrão já utilizado, documentação e testes da \textit{Komm};
+    \item disponibilizar uma \textbf{pipeline modular} para fins educacionais,
+          viabilizando a inspeção de resultados intermediários e a comparação com
+          exemplos da literatura (que, em geral, não mostram a saída em base binária).
 \end{itemize}
 
-\subsection{Arquitetura e Estrutura da Implementação}
-A implementação foi organizada em um módulo denominado
-\texttt{LempelZiv77Code.py}, composto pelas funções de \texttt{encode} e
-\texttt{decode}, além de rotinas auxiliares responsáveis pela manipulação da
-janela deslizante. O algoritmo segue a lógica clássica do LZ77, produzindo
-trios $\langle o, l, c \rangle$, onde:
-\begin{itemize}
-    \item $o$ (\textit{offset}): deslocamento em relação ao início da correspondência encontrada no \textit{search buffer};
-    \item $l$ (\textit{length}): comprimento da correspondência;
-    \item $c$ (\textit{character}): próximo símbolo literal após a correspondência.
-\end{itemize}
+\subsection{Janela deslizante e notação}\label{subsec:janela-notacao}
+
+Adotamos a notação usadas nas bibliografias que foram utilizadas para o estudo do algoritmo LZ77:
+\[
+    W = S + L,
+\]
+onde \(S\) é o tamanho do \emph{search buffer}, \(L\) é o tamanho do
+\emph{lookahead buffer} e \(W\) é o tamanho total da janela. Denotamos por \(
+|\mathcal{X}| \) a cardinalidade do alfabeto de \textbf{entrada} e por \(
+|\mathcal{Y}| \) a cardinalidade do alfabeto de \textbf{saída}.
+
+Cada token tem o formato
+\[
+    (p,\ell,x),
+\]
+em que \(p\) é o \textit{pointer} (deslocamento no \emph{search buffer}),
+\(\ell\) é o comprimento da ocorrência e \(x\in \mathcal{X}\) é o símbolo
+literal subsequente.
+
+\paragraph*{Origem do ponteiro.}
+Neste trabalho, seguindo o artigo original do LZ77, \(p\) é medido a partir do \textbf{início} do \emph{search buffer}. \emph{Observação}: algumas implementações didáticas medem a partir do \textbf{fim} do \emph{search buffer}; ambas convenções aparecem na literatura. Mantemos a primeira e documentamos a diferença quando necessário.
+
+\subsection{Arquitetura e estrutura da implementação}
+
+A classe \texttt{LempelZiv77Code} concentra a lógica do algoritmo e expõe a classe da seguinte maneira:
 \begin{lstlisting}[language=Python, caption={Estrutura simplificada da classe LZ77}]
 @dataclass
 class LempelZiv77Code:
-    source_cardinality: int
-    target_cardinality: int
-    window_size: int
-    lookahead_size: int
+    source_cardinality: int      # |X|
+    target_cardinality: int      # |Y|
+    window_size: int             # W
+    lookahead_size: int          # L (logo S = W - L)
 
-    def encode(self, data):
-        ...
-    def decode(self, encoded_data):
-        ...
+    def encode(self, data): ...
+    def decode(self, encoded): ...
+\end{lstlisting}
+
+Exemplo de uso:
+\begin{lstlisting}[language=Python, caption={Uso típico do LZ77 na \textit{Komm}}]
+lz77 = LempelZiv77Code(
+    source_cardinality=256,     # |X|
+    target_cardinality=2,       # |Y| (binário)
+    window_size=32768,          # W
+    lookahead_size=258          # L (então S = 32510)
+)
+encoded = lz77.encode(b"... dados ...")
+decoded = lz77.decode(encoded)
+assert decoded == b"... dados ..."
 \end{lstlisting}
 
 
-Na inicialização, cálculos automáticos determinam a largura dos campos dos
-triplos na base de destino ($T$), conforme:
-\[
-    D = \left\lceil \log_T(W+1) \right\rceil, \quad
-    L_w = \left\lceil \log_T(L+1) \right\rceil, \quad
-    M = \left\lceil \log_T(S) \right\rceil
-\]
-em que $W$ é o tamanho da janela deslizante (\textit{search buffer}), $L$ é o
-tamanho do \textit{lookahead buffer} e $S$ é a cardinalidade do alfabeto da
-fonte.
-
-
-%\subsection{Abordagem Algorítmica e Otimizações}
-%
-%O núcleo do algoritmo envolve a busca do maior trecho repetido na janela deslizante antecedente ("search buffer"). Este trabalho inovou ao combinar busca por força bruta com otimização via hash table, acelerando a identificação de padrões curtos e frequentes, como detalhado abaixo:
-%
-%\begin{itemize}
-%    \item \textbf{Busca por Hash Table:} Utiliza padrões fixos como chave de indexação; limitações de tamanho dos buckets garantem uso eficiente da memória.
-%    \item \textbf{Fallback para Força Bruta:} Caso o hash não encontre correspondências relevantes, ocorre varredura tradicional garantindo compressão ótima.
-%    \item \textbf{Suporte a Sobreposição (\textit{Overlap}):} Permite que triplos referenciem trechos em sobreposição, expandindo o potencial de compressão, conforme descrito na literatura.
-%\end{itemize}
-%Esse modelo garante alto desempenho sem sacrificar a compressão em sequências complexas.
-
-\section{Estrutura Modular do Algoritmo}
-
-Com o intuito de tornar a implementação não apenas funcional, mas também de
-caráter educacional, o algoritmo LZ77 foi dividido em quatro módulos
-principais: dois referentes à etapa de \textit{encode} e dois referentes à
-etapa de \textit{decode}. Essa divisão tem como objetivos:
-
-\begin{itemize}
-    \item \textbf{Clareza pedagógica:} permite visualizar separadamente cada fase do processo, facilitando o entendimento para estudantes e pesquisadores iniciantes na área de compressão de dados.
-    \item \textbf{Comparação com a literatura:} possibilita acompanhar resultados parciais que correspondem a descrições tradicionais encontradas em materiais de referência, mas que geralmente não apresentam uma implementação prática em código.
-    \item \textbf{Visualização dos resultados:} oferece uma camada adicional para inspecionar a saída intermediária, permitindo a análise tanto em nível conceitual quanto em nível binário, aspecto pouco explorado em outras implementações.
-\end{itemize}
-
-Os módulos estão organizados da seguinte forma:
+Com intuito pedagógico, a pipeline foi dividida em \textbf{quatro} módulos
+internos — dois para \texttt{encode} e dois para \texttt{decode}:
 \begin{enumerate}
-    \item \textbf{Codificação:}
+    \item \textbf{Codificação}
           \begin{itemize}
-              \item \texttt{source\_to\_triples}: identificação dos triplos $\langle o, l, c \rangle$ a partir da sequência de entrada;
-              \item \texttt{triples\_to\_target}: conversão dos triplos para o fluxo no alfabeto de saída (base $T$).
+              \item \texttt{source\_to\_tokens}: identifica os tokens \((p,\ell,x)\) sobre a janela \(W=S+L\);
+              \item \texttt{tokens\_to\_target}: mapeia os tokens para o fluxo no alfabeto de saída \(\mathcal{Y}\).
           \end{itemize}
-    \item \textbf{Decodificação:}
+    \item \textbf{Decodificação}
           \begin{itemize}
-              \item \texttt{target\_to\_triples}: reconstrução dos triplos a partir do fluxo no alfabeto de saída;
-              \item \texttt{triples\_to\_source}: recuperação da mensagem original no alfabeto de entrada.
+              \item \texttt{target\_to\_tokens}: reconstrói os tokens a partir do fluxo em \(\mathcal{Y}\);
+              \item \texttt{tokens\_to\_source}: recompõe a sequência original em \(\mathcal{X}\).
           \end{itemize}
 \end{enumerate}
 
-Essa abordagem modular é inédita dentro da biblioteca \textit{Komm} e busca
-proporcionar não apenas uma ferramenta prática, mas também um recurso didático
-útil para disciplinas de Teoria da Informação, Compressão de Dados e Sistemas
-de Comunicação.
+Essa organização favorece: (i) clareza didática; (ii) comparação direta com
+esquemas de manuais/artigos; e (iii) inspeção de saídas intermediárias
+(inclusive em binário), recurso raramente mostrado na literatura.
 
-\subsection{Abordagem Algorítmica}
+\subsection{Larguras de campos na saída}\label{subsec:larguras}
 
-O núcleo do algoritmo envolve a busca do maior trecho coincidente no
-\textit{search buffer}, usando uma janela deslizante de tamanho $W$ e um
-\textit{lookahead buffer} de tamanho $L$. Foram adotadas as seguintes
-estratégias:
+Seja a saída codificada em base \( |\mathcal{Y}| \). As larguras (em símbolos
+do alfabeto de saída) dos campos do token são:
+\[
+    w_p = \big\lceil \log_{|\mathcal{Y}|} S \big\rceil,\qquad
+    w_\ell = \big\lceil \log_{|\mathcal{Y}|} L \big\rceil,\qquad
+    w_x = \big\lceil \log_{|\mathcal{Y}|} |\mathcal{X}| \big\rceil,
+\]
+e o custo total por token é
+\[
+    n \;=\; w_p + w_\ell + w_x.
+\]
+
+\subsection{Testes e validação}\label{subsec:testes}
+
+Os testes unitários (\texttt{test\_lz77.py}) cobrem:
 \begin{itemize}
-    \item \textbf{Busca incremental:} varredura que tenta estender o comprimento $l$ enquanto a correspondência se mantém válida;
-    \item \textbf{Tratamento de sobreposição (overlap):} permissivo à referência de trechos parcialmente sobrepostos, preservando a corretude;
-    \item \textbf{Limites de janela:} garantias de que $o \leq W$ e $l \leq L$ em todas as emissões de triplos.
+    \item cadeias com alta redundância e com sobreposição;
+    \item exemplos reproduzidos da literatura.
 \end{itemize}
+A validação principal usa \textit{round trip} (\(\texttt{decode}(\texttt{encode}(x)) = x\)) e compara tokens/fluxos intermediários com os parâmetros \((W,S,L)\) e larguras \((w_p,w_\ell,w_x)\).
+\emph{Observação}: o teste de “pior caso de compressão” anterior foi removido por não haver, para o LZ77, um análogo simples e instrutivo (como no LZ78) que produza limite fechado exato.
 
-
-\subsection{Integração do modulo Lz77 com a Biblioteca Komm}
-A classe \texttt{LempelZiv77Code} foi integrada ao padrão da \textit{Komm},
-respeitando assinatura de métodos, tratamento de exceções e estilo de
-documentação. Isso garante que o usuário final possa utilizá-la de modo análogo
-aos demais códigos de fonte-canal presentes na biblioteca.
-\begin{lstlisting}[language=Python, caption={Exemplo de uso do LZ77 integrado à Komm}]
-lz77 = LempelZiv77Code(
-    source_cardinality=5,
-    target_cardinality=2,
-    window_size=13,
-    lookahead_size=6
-)
-encoded = lz77.encode([2,0,1,4,2,0,1, ...])
-decoded = lz77.decode(encoded)
-assert decoded == [2,0,1,4,2,0,1, ...]
-\end{lstlisting}
-
-\section{Testes e Validação}
-Foram implementados testes unitários (\texttt{test\_lz77.py}) cobrindo:
-\begin{itemize}
-    \item Casos simples com sequências curtas;
-    \item Cadeias altamente redundantes;
-    \item Piores casos para compressão (baixa redundância);
-    \item Exemplos extraídos da literatura técnica.
-\end{itemize}
-
-A validação principal utiliza testes de ida-e-volta (\textit{round trip}):
-\texttt{decode(encode(x)) == x}. Adicionalmente, as saídas intermediárias
-(triplos e fluxo no alfabeto de destino) são verificadas para garantir
-consistência com os parâmetros $(W, L, S)$ e com as larguras de campo $\{D,
-    L_w, M\}$.
-
-%\section{Resultados e Discussão}
-%Para validar o desempenho do algoritmo, foram comparados os resultados da compressão de diferentes cadeias com outros algoritmos já presentes na biblioteca.  
-%O LZ77 apresentou bons resultados em sequências redundantes, embora o overhead do trio $\langle o, l, c \rangle$ limite a eficiência em cadeias pequenas ou sem repetições.  
-%Ainda assim, sua implementação é um marco importante, pois serve de base para extensões futuras, como os algoritmos LZSS, LZ78 e LZW, ampliando o repertório da biblioteca \textit{Komm}.
