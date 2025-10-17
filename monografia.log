@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.5.3)  5 OCT 2025 16:20
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.5.3)  17 OCT 2025 07:43
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1561,7 +1561,7 @@ File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 
 
 ]) (./capitulos/capitulo-02.tex [14{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}]
-<figuras/DiagramasTCC-LZ77-template.png, id=193, 554.07pt x 188.705pt>
+<figuras/DiagramasTCC-LZ77-template.png, id=203, 554.07pt x 188.705pt>
 File: figuras/DiagramasTCC-LZ77-template.png Graphic file (type png)
 <use figuras/DiagramasTCC-LZ77-template.png>
 Package pdftex.def Info: figuras/DiagramasTCC-LZ77-template.png  used on input line 29.
@@ -1569,24 +1569,24 @@ Package pdftex.def Info: figuras/DiagramasTCC-LZ77-template.png  used on input l
  [15
 
 ]
-<figuras/DiagramasTCC-LZ77-Estado-0.png, id=206, 754.82pt x 148.555pt>
+<figuras/DiagramasTCC-LZ77-Estado-0.png, id=216, 754.82pt x 148.555pt>
 File: figuras/DiagramasTCC-LZ77-Estado-0.png Graphic file (type png)
 <use figuras/DiagramasTCC-LZ77-Estado-0.png>
 Package pdftex.def Info: figuras/DiagramasTCC-LZ77-Estado-0.png  used on input line 43.
 (pdftex.def)             Requested size: 426.79134pt x 83.99492pt.
-<figuras/DiagramasTCC-LZ77-Estado-1.png, id=212, 754.82pt x 491.8375pt>
+<figuras/DiagramasTCC-LZ77-Estado-1.png, id=222, 754.82pt x 491.8375pt>
 File: figuras/DiagramasTCC-LZ77-Estado-1.png Graphic file (type png)
 <use figuras/DiagramasTCC-LZ77-Estado-1.png>
 Package pdftex.def Info: figuras/DiagramasTCC-LZ77-Estado-1.png  used on input line 55.
 (pdftex.def)             Requested size: 426.79134pt x 278.09132pt.
  [16 <./figuras/DiagramasTCC-LZ77-template.png> <./figuras/DiagramasTCC-LZ77-Estado-0.png>] [17 <./figuras/DiagramasTCC-LZ77-Estado-1.png>]
-<figuras/DiagramasTCC-LZ77-Decoding.png, id=230, 703.62875pt x 925.4575pt>
+<figuras/DiagramasTCC-LZ77-Decoding.png, id=240, 703.62875pt x 925.4575pt>
 File: figuras/DiagramasTCC-LZ77-Decoding.png Graphic file (type png)
 <use figuras/DiagramasTCC-LZ77-Decoding.png>
 Package pdftex.def Info: figuras/DiagramasTCC-LZ77-Decoding.png  used on input line 77.
 (pdftex.def)             Requested size: 341.43306pt x 449.0723pt.
  [18 <./figuras/DiagramasTCC-LZ77-Decoding.png>] [19{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}]
-<figuras/DiagramasTCC-Aritmetic-Encoding.png, id=258, 603.25375pt x 762.85pt>
+<figuras/DiagramasTCC-Aritmetic-Encoding.png, id=268, 603.25375pt x 762.85pt>
 File: figuras/DiagramasTCC-Aritmetic-Encoding.png Graphic file (type png)
 <use figuras/DiagramasTCC-Aritmetic-Encoding.png>
 Package pdftex.def Info: figuras/DiagramasTCC-Aritmetic-Encoding.png  used on input line 153.
@@ -1594,7 +1594,7 @@ Package pdftex.def Info: figuras/DiagramasTCC-Aritmetic-Encoding.png  used on in
  [20] [21 <./figuras/DiagramasTCC-Aritmetic-Encoding.png>]
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <12> not available
 (Font)              Font shape `T1/lmtt/b/n' tried instead on input line 170.
-<figuras/DiagramasTCC-Diagramas-Aritmetic-Encoding-Bits.png, id=270, 534.99875pt x 724.7075pt>
+<figuras/DiagramasTCC-Diagramas-Aritmetic-Encoding-Bits.png, id=280, 534.99875pt x 724.7075pt>
 File: figuras/DiagramasTCC-Diagramas-Aritmetic-Encoding-Bits.png Graphic file (type png)
 <use figuras/DiagramasTCC-Diagramas-Aritmetic-Encoding-Bits.png>
 Package pdftex.def Info: figuras/DiagramasTCC-Diagramas-Aritmetic-Encoding-Bits.png  used on input line 192.
@@ -1604,33 +1604,33 @@ LaTeX Font Info:    Trying to load font information for OT1+lmtt on input line 2
  (/usr/share/texmf/tex/latex/lm/ot1lmtt.fd
 File: ot1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-<figuras/DiagramasTCC-Aritmetic-Rescaling.png, id=282, 726.715pt x 786.94pt>
+<figuras/DiagramasTCC-Aritmetic-Rescaling.png, id=292, 726.715pt x 786.94pt>
 File: figuras/DiagramasTCC-Aritmetic-Rescaling.png Graphic file (type png)
 <use figuras/DiagramasTCC-Aritmetic-Rescaling.png>
 Package pdftex.def Info: figuras/DiagramasTCC-Aritmetic-Rescaling.png  used on input line 224.
 (pdftex.def)             Requested size: 369.88582pt x 400.54158pt.
  [23{/usr/share/texmf/fonts/enc/dvips/lm/lm-rmtt.enc}] [24 <./figuras/DiagramasTCC-Aritmetic-Rescaling.png>]
-<figuras/DiagramasTCC-Diagramas-Aritmetic-Rescaling-0.png, id=304, 723.70375pt x 93.34875pt>
+<figuras/DiagramasTCC-Diagramas-Aritmetic-Rescaling-0.png, id=315, 723.70375pt x 93.34875pt>
 File: figuras/DiagramasTCC-Diagramas-Aritmetic-Rescaling-0.png Graphic file (type png)
 <use figuras/DiagramasTCC-Diagramas-Aritmetic-Rescaling-0.png>
 Package pdftex.def Info: figuras/DiagramasTCC-Diagramas-Aritmetic-Rescaling-0.png  used on input line 263.
 (pdftex.def)             Requested size: 341.43306pt x 44.04056pt.
-<figuras/DiagramasTCC-Diagramas-Aritmetic-Rescaling-1.png, id=305, 723.70375pt x 113.42375pt>
+<figuras/DiagramasTCC-Diagramas-Aritmetic-Rescaling-1.png, id=316, 723.70375pt x 113.42375pt>
 File: figuras/DiagramasTCC-Diagramas-Aritmetic-Rescaling-1.png Graphic file (type png)
 <use figuras/DiagramasTCC-Diagramas-Aritmetic-Rescaling-1.png>
 Package pdftex.def Info: figuras/DiagramasTCC-Diagramas-Aritmetic-Rescaling-1.png  used on input line 271.
 (pdftex.def)             Requested size: 341.43306pt x 53.51166pt.
-<figuras/DiagramasTCC-Diagramas-Aritmetic-Rescaling-S.png, id=306, 723.70375pt x 110.4125pt>
+<figuras/DiagramasTCC-Diagramas-Aritmetic-Rescaling-S.png, id=317, 723.70375pt x 110.4125pt>
 File: figuras/DiagramasTCC-Diagramas-Aritmetic-Rescaling-S.png Graphic file (type png)
 <use figuras/DiagramasTCC-Diagramas-Aritmetic-Rescaling-S.png>
 Package pdftex.def Info: figuras/DiagramasTCC-Diagramas-Aritmetic-Rescaling-S.png  used on input line 279.
 (pdftex.def)             Requested size: 341.43306pt x 52.09099pt.
-<figuras/DiagramasTCC-Diagramas-Aritmetic-Rescaling-3Q.png, id=309, 723.70375pt x 114.4275pt>
+<figuras/DiagramasTCC-Diagramas-Aritmetic-Rescaling-3Q.png, id=320, 723.70375pt x 114.4275pt>
 File: figuras/DiagramasTCC-Diagramas-Aritmetic-Rescaling-3Q.png Graphic file (type png)
 <use figuras/DiagramasTCC-Diagramas-Aritmetic-Rescaling-3Q.png>
 Package pdftex.def Info: figuras/DiagramasTCC-Diagramas-Aritmetic-Rescaling-3Q.png  used on input line 289.
 (pdftex.def)             Requested size: 341.43306pt x 53.98521pt.
-<figuras/DiagramasTCC-Diagramas-Aritmetic-Rescaling-Q.png, id=310, 723.70375pt x 114.4275pt>
+<figuras/DiagramasTCC-Diagramas-Aritmetic-Rescaling-Q.png, id=321, 723.70375pt x 114.4275pt>
 File: figuras/DiagramasTCC-Diagramas-Aritmetic-Rescaling-Q.png Graphic file (type png)
 <use figuras/DiagramasTCC-Diagramas-Aritmetic-Rescaling-Q.png>
 Package pdftex.def Info: figuras/DiagramasTCC-Diagramas-Aritmetic-Rescaling-Q.png  used on input line 297.
@@ -1651,18 +1651,37 @@ Overfull \hbox (4.6596pt too wide) in paragraph at lines 340--342
 File: lstlang1.sty 2023/02/27 1.9 listings language file
 ) (/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
-) [29]) (./capitulos/capitulo-04.tex) [30]
+) [29]) (./capitulos/capitulo-04.tex [30]
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 10.
+<figuras/smiley-large.png, id=379, 244.915pt x 241.90375pt>
+File: figuras/smiley-large.png Graphic file (type png)
+<use figuras/smiley-large.png>
+Package pdftex.def Info: figuras/smiley-large.png  used on input line 17.
+(pdftex.def)             Requested size: 142.26378pt x 140.51836pt.
+<figuras/snail.png, id=380, 256.96pt x 256.96pt>
+File: figuras/snail.png Graphic file (type png)
+<use figuras/snail.png>
+Package pdftex.def Info: figuras/snail.png  used on input line 25.
+(pdftex.def)             Requested size: 142.26378pt x 142.26552pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[31
+
+ <./figuras/smiley-large.png>]) [32 <./figuras/snail.png (PNG copy)>]
 Overfull \hbox (25.1742pt too wide) in paragraph at lines 115--115
 [][]\T1/lmr/m/n/12 NELSON, M. \T1/lmr/bx/n/12 The Data Com-pres-sion Book\T1/lmr/m/n/12 . BPB Pu-bli-ca-ti-ons, 2008. ISBN 9788170297291.
  []
 
-(./anexos-apendices/apendices.tex [31
+(./anexos-apendices/apendices.tex [33
 
-]) (./anexos-apendices/anexos.tex [32
+]) (./anexos-apendices/anexos.tex [34
 
-] [33
+] [35
 
-]) [34
+]) [36
 
 ]
 \tf@lof=\write9
@@ -1692,18 +1711,18 @@ Package logreq Info: Writing requests to 'monografia.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 47401 strings out of 474222
- 894516 string characters out of 5748734
+ 47444 strings out of 474222
+ 895221 string characters out of 5748734
  2111975 words of memory out of 5000000
- 68746 multiletter control sequences out of 15000+600000
- 626330 words of font info for 81 fonts, out of 8000000 for 9000
+ 68776 multiletter control sequences out of 15000+600000
+ 633840 words of font info for 88 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  124i,12n,121p,2438b,4454s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmbxi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi12.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmri12.pfb></usr/share/texmf/fonts/type1/public/lm/lmri8.pfb></usr/share/texmf/fonts/type1/public/lm/lmss12.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf/fonts/type1/public/lm/lmtk10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt12.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt8.pfb>
-Output written on monografia.pdf (35 pages, 517266 bytes).
+</usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmbxi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi12.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr7.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmri12.pfb></usr/share/texmf/fonts/type1/public/lm/lmri8.pfb></usr/share/texmf/fonts/type1/public/lm/lmss12.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf/fonts/type1/public/lm/lmtk10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt12.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt8.pfb>
+Output written on monografia.pdf (37 pages, 577815 bytes).
 PDF statistics:
- 619 PDF objects out of 1000 (max. 8388607)
- 503 compressed objects within 6 object streams
- 131 named destinations out of 1000 (max. 500000)
- 345 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 662 PDF objects out of 1000 (max. 8388607)
+ 540 compressed objects within 6 object streams
+ 139 named destinations out of 1000 (max. 500000)
+ 379 words of extra memory for PDF output out of 10000 (max. 10000000)
 
