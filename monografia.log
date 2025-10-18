@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.5.3)  18 OCT 2025 09:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.5.3)  18 OCT 2025 09:44
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1732,6 +1732,9 @@ File: figuras/komm_smiley_memory.png Graphic file (type png)
 <use figuras/komm_smiley_memory.png>
 Package pdftex.def Info: figuras/komm_smiley_memory.png  used on input line 104.
 (pdftex.def)             Requested size: 426.79134pt x 168.12823pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 <figuras/komm_smiley_time.png, id=432, 714.7503pt x 281.853pt>
 File: figuras/komm_smiley_time.png Graphic file (type png)
 <use figuras/komm_smiley_time.png>
@@ -1739,15 +1742,15 @@ Package pdftex.def Info: figuras/komm_smiley_time.png  used on input line 112.
 (pdftex.def)             Requested size: 426.79134pt x 168.30457pt.
 [34 <./figuras/komm_alice_memory.png> <./figuras/komm_alice_time.png>]
 
-LaTeX Warning: Reference `fig:fig:external-alice-memory' on page 35 undefined on input line 144.
+LaTeX Warning: Reference `fig:fig:external-alice-memory' on page 35 undefined on input line 143.
 
 
-LaTeX Warning: Reference `fig:fig:external-alice-time' on page 35 undefined on input line 144.
+LaTeX Warning: Reference `fig:fig:external-alice-time' on page 35 undefined on input line 143.
 
 <figuras/lz77_alice_compression_window.png, id=442, 642.4803pt x 353.4003pt>
 File: figuras/lz77_alice_compression_window.png Graphic file (type png)
 <use figuras/lz77_alice_compression_window.png>
-Package pdftex.def Info: figuras/lz77_alice_compression_window.png  used on input line 155.
+Package pdftex.def Info: figuras/lz77_alice_compression_window.png  used on input line 154.
 (pdftex.def)             Requested size: 426.79134pt x 234.76018pt.
 [35 <./figuras/komm_smiley_compression.png> <./figuras/komm_smiley_memory.png>]
 
