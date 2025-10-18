@@ -1,0 +1,275 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global}
+    \entry{rfc1951}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=c9c8eee224ab310e0bbbd326d5969886}{%
+           family={Deutsch},
+           familyi={D\bibinitperiod},
+           given={L.\bibnamedelimi Peter},
+           giveni={L\bibinitperiod\bibinitdelim P\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {RFC Editor}%
+      }
+      \strng{namehash}{c9c8eee224ab310e0bbbd326d5969886}
+      \strng{fullhash}{c9c8eee224ab310e0bbbd326d5969886}
+      \strng{bibnamehash}{c9c8eee224ab310e0bbbd326d5969886}
+      \strng{authorbibnamehash}{c9c8eee224ab310e0bbbd326d5969886}
+      \strng{authornamehash}{c9c8eee224ab310e0bbbd326d5969886}
+      \strng{authorfullhash}{c9c8eee224ab310e0bbbd326d5969886}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This specification defines a lossless compressed data format that compresses data using a combination of the LZ77 algorithm and Huffman coding, with efficiency comparable to the best currently available general-purpose compression methods. This memo provides information for the Internet community. This memo does not specify an Internet standard of any kind.}
+      \field{howpublished}{RFC 1951}
+      \field{month}{5}
+      \field{number}{1951}
+      \field{pagetotal}{17}
+      \field{series}{Request for Comments}
+      \field{title}{{DEFLATE Compressed Data Format Specification version 1.3}}
+      \field{year}{1996}
+      \verb{doi}
+      \verb 10.17487/RFC1951
+      \endverb
+      \verb{urlraw}
+      \verb https://www.rfc-editor.org/info/rfc1951
+      \endverb
+      \verb{url}
+      \verb https://www.rfc-editor.org/info/rfc1951
+      \endverb
+    \endentry
+    \entry{mackay2003information}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=9f6c0a6544c28f7c57d6815b7d768f60}{%
+           family={MacKay},
+           familyi={M\bibinitperiod},
+           given={D.J.C.},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{9f6c0a6544c28f7c57d6815b7d768f60}
+      \strng{fullhash}{9f6c0a6544c28f7c57d6815b7d768f60}
+      \strng{bibnamehash}{9f6c0a6544c28f7c57d6815b7d768f60}
+      \strng{authorbibnamehash}{9f6c0a6544c28f7c57d6815b7d768f60}
+      \strng{authornamehash}{9f6c0a6544c28f7c57d6815b7d768f60}
+      \strng{authorfullhash}{9f6c0a6544c28f7c57d6815b7d768f60}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9780521642989}
+      \field{title}{Information Theory, Inference and Learning Algorithms}
+      \field{year}{2003}
+      \verb{urlraw}
+      \verb https://books.google.com.br/books?id=AKuMj4PN_EMC
+      \endverb
+      \verb{url}
+      \verb https://books.google.com.br/books?id=AKuMj4PN_EMC
+      \endverb
+    \endentry
+    \entry{nelson2008data}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=6f7addc8dbea21c85d331deb04262307}{%
+           family={Nelson},
+           familyi={N\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {BPB Publications}%
+      }
+      \strng{namehash}{6f7addc8dbea21c85d331deb04262307}
+      \strng{fullhash}{6f7addc8dbea21c85d331deb04262307}
+      \strng{bibnamehash}{6f7addc8dbea21c85d331deb04262307}
+      \strng{authorbibnamehash}{6f7addc8dbea21c85d331deb04262307}
+      \strng{authornamehash}{6f7addc8dbea21c85d331deb04262307}
+      \strng{authorfullhash}{6f7addc8dbea21c85d331deb04262307}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9788170297291}
+      \field{title}{The Data Compression Book}
+      \field{year}{2008}
+      \verb{urlraw}
+      \verb https://books.google.com.br/books?id=pndwnAEACAAJ
+      \endverb
+      \verb{url}
+      \verb https://books.google.com.br/books?id=pndwnAEACAAJ
+      \endverb
+    \endentry
+    \entry{10.5555/908099}{thesis}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=efce92d2fb568a6f90b727dd813cdd1c}{%
+           family={Pasco},
+           familyi={P\bibinitperiod},
+           given={Richard\bibnamedelima Clark},
+           giveni={R\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{institution}{1}{%
+        {Stanford University}%
+      }
+      \list{location}{1}{%
+        {Stanford, CA, USA}%
+      }
+      \strng{namehash}{efce92d2fb568a6f90b727dd813cdd1c}
+      \strng{fullhash}{efce92d2fb568a6f90b727dd813cdd1c}
+      \strng{bibnamehash}{efce92d2fb568a6f90b727dd813cdd1c}
+      \strng{authorbibnamehash}{efce92d2fb568a6f90b727dd813cdd1c}
+      \strng{authornamehash}{efce92d2fb568a6f90b727dd813cdd1c}
+      \strng{authorfullhash}{efce92d2fb568a6f90b727dd813cdd1c}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{bookpagination}{sheet}
+      \field{note}{AAI7626055}
+      \field{title}{Source coding algorithms for fast data compression.}
+      \field{type}{phdthesis}
+      \field{year}{1976}
+    \endentry
+    \entry{5391119}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=e6cb9c951c2d3662a0f4e9c4439f968d}{%
+           family={Rissanen},
+           familyi={R\bibinitperiod},
+           given={J.\bibnamedelimi J.},
+           giveni={J\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{e6cb9c951c2d3662a0f4e9c4439f968d}
+      \strng{fullhash}{e6cb9c951c2d3662a0f4e9c4439f968d}
+      \strng{bibnamehash}{e6cb9c951c2d3662a0f4e9c4439f968d}
+      \strng{authorbibnamehash}{e6cb9c951c2d3662a0f4e9c4439f968d}
+      \strng{authornamehash}{e6cb9c951c2d3662a0f4e9c4439f968d}
+      \strng{authorfullhash}{e6cb9c951c2d3662a0f4e9c4439f968d}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IBM Journal of Research and Development}
+      \field{number}{3}
+      \field{title}{Generalized Kraft Inequality and Arithmetic Coding}
+      \field{volume}{20}
+      \field{year}{1976}
+      \field{pages}{198\bibrangedash 203}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1147/rd.203.0198
+      \endverb
+    \endentry
+    \entry{sayood2012introduction}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=641bb5844eaaa3b0ae69bb2fdbae1d2e}{%
+           family={Sayood},
+           familyi={S\bibinitperiod},
+           given={K.},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier Science}%
+      }
+      \strng{namehash}{641bb5844eaaa3b0ae69bb2fdbae1d2e}
+      \strng{fullhash}{641bb5844eaaa3b0ae69bb2fdbae1d2e}
+      \strng{bibnamehash}{641bb5844eaaa3b0ae69bb2fdbae1d2e}
+      \strng{authorbibnamehash}{641bb5844eaaa3b0ae69bb2fdbae1d2e}
+      \strng{authornamehash}{641bb5844eaaa3b0ae69bb2fdbae1d2e}
+      \strng{authorfullhash}{641bb5844eaaa3b0ae69bb2fdbae1d2e}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9780124157965}
+      \field{series}{The Morgan Kaufmann Series in Multimedia Information and Systems}
+      \field{title}{Introduction to Data Compression}
+      \field{year}{2012}
+      \verb{urlraw}
+      \verb https://books.google.com.br/books?id=mkCMxnHm6hsC
+      \endverb
+      \verb{url}
+      \verb https://books.google.com.br/books?id=mkCMxnHm6hsC
+      \endverb
+    \endentry
+    \entry{1055714}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=66c17d5c1088d4f705399f18f3461ef5}{%
+           family={Ziv},
+           familyi={Z\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fbe575925b828a4cce363199c686254b}{%
+           family={Lempel},
+           familyi={L\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{5e04f906091792edfd83f98b58de128e}
+      \strng{fullhash}{5e04f906091792edfd83f98b58de128e}
+      \strng{bibnamehash}{5e04f906091792edfd83f98b58de128e}
+      \strng{authorbibnamehash}{5e04f906091792edfd83f98b58de128e}
+      \strng{authornamehash}{5e04f906091792edfd83f98b58de128e}
+      \strng{authorfullhash}{5e04f906091792edfd83f98b58de128e}
+      \field{sortinit}{Z}
+      \field{sortinithash}{96892c0b0a36bb8557c40c49813d48b3}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on Information Theory}
+      \field{number}{3}
+      \field{title}{A universal algorithm for sequential data compression}
+      \field{volume}{23}
+      \field{year}{1977}
+      \field{pages}{337\bibrangedash 343}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.1109/TIT.1977.1055714
+      \endverb
+    \endentry
+  \enddatalist
+  \missing{https://github.com/ariya/FastLZ}
+  \missing{https://github.com/manassra/LZ77-Compressor}
+\endrefsection
+\endinput
+

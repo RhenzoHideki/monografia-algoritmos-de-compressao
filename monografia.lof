@@ -14,3 +14,10 @@
 \contentsline {figure}{\numberline {12}{\ignorespaces Subdivisão específica em \( \frac {1}{4} \)}}{26}{figure.caption.25}%
 \contentsline {figure}{\numberline {13}{\ignorespaces Imagem no formato bitmap (BMP) de um smiley}}{31}{figure.caption.27}%
 \contentsline {figure}{\numberline {14}{\ignorespaces Imagem no formato bitmap (BMP) de um caracol}}{32}{figure.caption.28}%
+\contentsline {figure}{\numberline {15}{\ignorespaces Taxa de compressão do texto \textit {Alice} utilizando a biblioteca \textit {Komm}}}{33}{figure.caption.29}%
+\contentsline {figure}{\numberline {16}{\ignorespaces Uso de memória durante a compressão do texto \textit {Alice} utilizando a biblioteca \textit {Komm}}}{34}{figure.caption.30}%
+\contentsline {figure}{\numberline {17}{\ignorespaces Tempo de compressão do texto \textit {Alice} utilizando a biblioteca \textit {Komm}}}{34}{figure.caption.31}%
+\contentsline {figure}{\numberline {18}{\ignorespaces Taxa de compressão da imagem \textit {Smiley} utilizando a biblioteca \textit {Komm}}}{35}{figure.caption.32}%
+\contentsline {figure}{\numberline {19}{\ignorespaces Uso de memória durante a compressão da imagem \textit {smiley} utilizando a biblioteca \textit {Komm}}}{35}{figure.caption.33}%
+\contentsline {figure}{\numberline {20}{\ignorespaces Tempo de compressão da imagem\textit {smiley} utilizando a biblioteca \textit {Komm}}}{36}{figure.caption.34}%
+\contentsline {figure}{\numberline {21}{\ignorespaces Taxa de compressão do texto \textit {Alice} utilizando bibliotecas externas}}{37}{figure.caption.36}%

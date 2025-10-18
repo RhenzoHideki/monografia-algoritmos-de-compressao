@@ -32,20 +32,22 @@
 \contentsline {chapter}{\chapternumberline {4}\MakeTextUppercase []{Resultados}}{31}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Métricas de Avaliação}{32}{section.4.1}%
 \contentsline {section}{\numberline {4.2}Resultados Obtidos}{32}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Resultados com a biblioteca \textit {Komm}}{33}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Resultados obtidos em comparação com códigos externos}{35}{subsection.4.2.2}%
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\contentsline {chapter}{Referências}{33}{section*.30}%
+\contentsline {chapter}{Referências}{38}{section*.38}%
 \renewcommand *{\cftappendixname }{AP\^ENDICE \space }
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
 \cftinsert {A}
-\contentsline {appendix}{\chapternumberline {A}\MakeTextUppercase []{Meu primeiro apêndice}}{34}{appendix.A}%
+\contentsline {appendix}{\chapternumberline {A}\MakeTextUppercase []{Meu primeiro apêndice}}{39}{appendix.A}%
 \cftinsert {AAA}
 \renewcommand *{\cftappendixname }{ANEXO \space }
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
 \cftinsert {A}
-\contentsline {appendix}{\chapternumberline {A}\MakeTextUppercase []{Meu primeiro assunto de anexo}}{35}{appendix.anexochapback.1}%
+\contentsline {appendix}{\chapternumberline {A}\MakeTextUppercase []{Meu primeiro assunto de anexo}}{40}{appendix.anexochapback.1}%
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
 \cftinsert {A}
-\contentsline {appendix}{\chapternumberline {B}\MakeTextUppercase []{Segundo assunto que pesquisei}}{36}{appendix.anexochapback.2}%
+\contentsline {appendix}{\chapternumberline {B}\MakeTextUppercase []{Segundo assunto que pesquisei}}{41}{appendix.anexochapback.2}%
