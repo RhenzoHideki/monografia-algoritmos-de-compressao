@@ -2467,8 +2467,6 @@
     <bcf:citekey order="22" intorder="1">nelson2008data</bcf:citekey>
     <bcf:citekey order="23" intorder="1">10.5555/908099</bcf:citekey>
     <bcf:citekey order="24" intorder="1">5391119</bcf:citekey>
-    <bcf:citekey order="25" intorder="1">https://github.com/manassra/LZ77-Compressor</bcf:citekey>
-    <bcf:citekey order="26" intorder="1">https://github.com/ariya/FastLZ</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">
