@@ -1,9 +1,10 @@
 \chapter{Resultados}\label{cap:Resultados}
 
-Este capítulo apresenta os experimentos realizados com os algoritmos implementados na biblioteca \textit{Komm}, bem como comparações com implementações externas populares no Github. Reportamos taxa de compressão, tempo de execução e consumo de memória.
+Este capítulo apresenta os experimentos realizados com a implementação do \textit{LZ77} na biblioteca \textit{Komm} e sua comparação com implementações externas do mesmo algoritmo. Os demais métodos disponíveis na \textit{Komm} (Huffman, Shannon--Fano, Tunstall, LZ78 e LZW) são utilizados apenas como linhas de base para contextualização.
+
 \section{Conjuntos de dados e protocolo experimental}
 
-Foram utilizados dois tipos de arquivos: (i) \textbf{textos} e (ii) \textbf{imagens}. O texto escolhido foi o livro \textit{Alice’s Adventures in Wonderland}, do Projeto Gutenberg\footnote{\url{https://www.gutenberg.org/ebooks/11}}, por ser um corpus literário clássico, com distribuição de caracteres e padrões suficientemente ricos para avaliar compressão sem perdas. As imagens são bitmaps (\textbf{BMP}) simples, adequadas para observar o comportamento em regiões com grandes áreas uniformes.
+Foram utilizados dois tipos de arquivos: (i) \textbf{textos} e (ii) \textbf{imagens}. O texto escolhido foi o livro \textit{Alice’s Adventures in Wonderland}, do Projeto Gutenberg\footnote{\url{https://www.gutenberg.org/ebooks/11}}, por se tratar de um corpus literário clássico, com distribuição de caracteres e padrões ricos para avaliar compressão sem perdas. As imagens adotadas são bitmaps (\textbf{BMP}) simples, adequadas para observar o comportamento em regiões com amplas áreas uniformes.
 
 As duas imagens utilizadas são mostradas nas Figuras~\ref{fig:smiley} e~\ref{fig:snail}.
 
@@ -25,28 +26,27 @@ As duas imagens utilizadas são mostradas nas Figuras~\ref{fig:smiley} e~\ref{fi
 
 \section{Métricas de avaliação}
 
-As seguintes métricas foram computadas:
-
+As seguintes métricas foram consideradas:
 \begin{itemize}
-  \item \textbf{Taxa de compressão}: Razão entre o tamanho não comprimido e o tamanho comprimido.
+  \item \textbf{Taxa de compressão}: percentual do tamanho original após a compressão (quanto menor, melhor).
   \item \textbf{Tempo de compressão/descompressão}: medido em segundos.
   \item \textbf{Memória pico}: memória máxima observada durante a execução (MB).
   \item \textbf{Integridade}: verificação de \emph{round trip} (\texttt{decode(encode(x)) == x}).
 \end{itemize}
 
-\section{Resultados com a biblioteca \textit{Komm}}
+\section{Resultados do LZ77 na \textit{Komm}}
 
-Iniciamos avaliando as implementações já disponíveis na \textit{Komm}: Huffman, Shannon--Fano, Tunstall, LZ78, LZW e LZ77 (com janelas de 4\,kB a 64\,kB). As Figuras~\ref{fig:komm-alice-compression}–\ref{fig:komm-alice-time} apresentam os resultados sobre o texto \textit{Alice}; as Figuras~\ref{fig:komm-smiley-compression}–\ref{fig:komm-smiley-time}, sobre a imagem \textit{smiley}.
+A implementação do \textit{LZ77} na \textit{Komm} foi avaliada variando-se o tamanho da janela deslizante \(W\) (4\,kB a 64\,kB). As Figuras~\ref{fig:komm-alice-compression}–\ref{fig:komm-alice-time} apresentam os resultados sobre o texto \textit{Alice}; as Figuras~\ref{fig:komm-smiley-compression}–\ref{fig:komm-smiley-time}, sobre a imagem \textit{smiley}. Nos gráficos em que aparecem outros algoritmos, eles desempenham o papel de referência.
 
-\begin{figure}[h]
+\begin{figure}[htp]
   \centering
-  \caption{Texto \textit{Alice}: taxa de compressão.}
+  \caption{Texto \textit{Alice}: taxa de compressão (menor é melhor).}
   \label{fig:komm-alice-compression}
   \includegraphics[width=15cm]{figuras/komm_alice_compression.png}
   \fonte{Elaborada pelo autor.}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[htp]
   \centering
   \caption{Texto \textit{Alice}: memória pico.}
   \label{fig:komm-alice-memory}
@@ -54,7 +54,7 @@ Iniciamos avaliando as implementações já disponíveis na \textit{Komm}: Huffm
   \fonte{Elaborada pelo autor.}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[htp]
   \centering
   \caption{Texto \textit{Alice}: tempo de compressão.}
   \label{fig:komm-alice-time}
@@ -62,23 +62,21 @@ Iniciamos avaliando as implementações já disponíveis na \textit{Komm}: Huffm
   \fonte{Elaborada pelo autor.}
 \end{figure}
 
-Principais observações (texto):
+\noindent\textbf{Observações (texto).}
 \begin{itemize}
-  \item As variantes do \textit{LZ77} exibem o \emph{trade-off} esperado: janelas maiores melhoram a taxa de compressão, com aumento proporcional de tempo e memória.
-  \item \textit{Huffman} e \textit{Shannon--Fano} são muito rápidos e leves em memória, com taxas compatíveis com códigos prefixos estáticos.
-  \item \textit{Tunstall} demanda mais memória (dicionários extensos), refletindo-se também no tempo.
-  \item \textit{LZ78} e \textit{LZW} ficam em um ponto intermediário entre taxa e tempo.
+  \item O \textit{LZ77} apresenta o \emph{trade-off} esperado: aumentar \(W\) melhora a taxa de compressão (maior chance de \emph{matches} longos), ao custo de maior tempo e memória.
+  \item Em relação às linhas de base, Huffman e Shannon--Fano são sistematicamente mais rápidos e leves, porém com taxas típicas de códigos prefixos; já Tunstall/LZ78/LZW situam-se entre os extremos.
 \end{itemize}
 
-\begin{figure}[h]
+\begin{figure}[htp]
   \centering
-  \caption{Imagem \textit{smiley}: taxa de compressão.}
+  \caption{Imagem \textit{smiley}: taxa de compressão (menor é melhor).}
   \label{fig:komm-smiley-compression}
   \includegraphics[width=15cm]{figuras/komm_smiley_compression.png}
   \fonte{Elaborada pelo autor.}
 \end{figure}
 
-\begin{figure}[ht]
+\begin{figure}[htp]
   \centering
   \caption{Imagem \textit{smiley}: memória pico.}
   \label{fig:komm-smiley-memory}
@@ -86,7 +84,7 @@ Principais observações (texto):
   \fonte{Elaborada pelo autor.}
 \end{figure}
 
-\begin{figure}[ht]
+\begin{figure}[htp]
   \centering
   \caption{Imagem \textit{smiley}: tempo de compressão.}
   \label{fig:komm-smiley-time}
@@ -94,58 +92,52 @@ Principais observações (texto):
   \fonte{Elaborada pelo autor.}
 \end{figure}
 
-
-Principais observações (imagem):
+\noindent\textbf{Observações (imagem).}
 \begin{itemize}
-  \item Apesar das imagens terem grandes áreas uniformes, o LZ77 não alcança taxas tão elevadas quanto no texto, e também não supera as outras técnicas.
-  \item O custo de tempo/memória cresce com a janela no LZ77, enquanto permanece relativamente estável para Huffman, Shannon--Fano e LZ78/LZW.
+  \item Em imagens com grandes áreas uniformes, a variação de \(W\) também impacta: janelas maiores tendem a reduzir a taxa, porém com aumento de custo computacional.
+  \item O benefício em taxa para imagens foi menos pronunciado que para texto, o que reflete a estrutura estatística distinta das fontes.
 \end{itemize}
 
-\begin{quadro}[ht]
-\caption{Quadro mostrando uso de memoria e tempo dos algoritmos}\label{quadro:resultados-komm-smiley}
+\begin{quadro}[htp]
+\caption{Tempo de execução e pico de memória na imagem \textit{smiley} (implementações na \textit{Komm}).}\label{quadro:resultados-komm-smiley}
 \begin{tabular}{|l|r|r|}
     \hline
-    \textbf{Algoritmo de compressão}& \textbf{Tempo (s)}  & \textbf{Pico de Memoria (MB)} \\ \hline
-    komm-lz77-4k & 0,0096 & 367,894 \\ \hline
-    komm-lz77-8k,97 & 0,0039 & 148,218 \\ \hline
-    komm-lz77-16k & 0,0062 & 287,370 \\ \hline
-    komm-lz77-32k & 0,0115 & 566,106 \\ \hline
-    komm-lz77-64k & 0,0228 & 112,2954 \\ \hline
-    komm-huff & 0,0092 & 140,961 \\ \hline
-    komm-fano & 0,0313 & 314,210 \\ \hline
-    komm-shannon & 0,0026 & 38,195 \\ \hline
-    komm-tuns & 3,750 & 15.1985,336 \\ \hline
-    komm-lz78 & 0,0011 & 19,928 \\ \hline
-    komm-lzw & 0,0011 & 43,084 \\ \hline
-
+    \textbf{Algoritmo de compressão} & \textbf{Tempo (s)} & \textbf{Pico de memória (MB)} \\
+    \hline
+    komm-lz77-4k   & 0,0096 & 367,894  \\ \hline
+    komm-lz77-8k,97 & 0,0039 & 148,218  \\ \hline
+    komm-lz77-16k  & 0,0062 & 287,370  \\ \hline
+    komm-lz77-32k  & 0,0115 & 566,106  \\ \hline
+    komm-lz77-64k  & 0,0228 & 112,2954 \\ \hline
+    komm-huff      & 0,0092 & 140,961  \\ \hline
+    komm-fano      & 0,0313 & 314,210  \\ \hline
+    komm-shannon   & 0,0026 & 38,195   \\ \hline
+    komm-tuns      & 3,750  & 15.1985,336 \\ \hline
+    komm-lz78      & 0,0011 & 19,928   \\ \hline
+    komm-lzw       & 0,0011 & 43,084   \\ \hline
 \end{tabular}
-\fonteproprioautor
+\fonte{Elaborada pelo autor.}
 \end{quadro}
 
-\newpage
+\pagebreak
+\pagebreak
+\pagebreak
 
-\section{Resultados com a biblioteca bibliotecas externas}
-Foram selecionadas as seguintes bibliotecas externas populares no Github para comparação:
-\begin{itemize}
-  \item \textbf{FastLZ\footnote{https://github.com/ariya/FastLZ}}: implementação em C do algoritmo LZ77.
-  \item \textbf{LZ77-Compressor\footnote{https://github.com/manassra/LZ77-Compressor}}: implementação em Python do algoritmo LZ77.
-\end{itemize}
+\section{Comparação com implementações externas de LZ77}\label{sec:externas}
 
-Ambas as implementação não possuem todos parametros ajustáveis como a \textit{Komm}, portanto, foram utilizadas com suas configurações padrão e dentro da biblioteca \textit{Komm} foram passados parâmetros similares para comparação justa.
-O código \textbf{LZ77-Compressor} em tem como configuração apenas o tamanho da janela, que poderia varia do tamanho de 100 até 400 bytes, porém não há como ajustar o tamanho do lookahead buffer que tem o tamnho de 15 bytes. Já o \textbf{FastLZ} não possui nenhuma configuração, sendo assim, foi utilizado o tamanho padrão da janela de 8kB e lookahead buffer de 264 bytes.
-Com isso em mente, foram realizados os testes com as mesmas imagens e textos utilizados anteriormente, e variando a biblioteca komm com parâmetros similares aos das bibliotecas externas.
+Foram consideradas duas implementações populares: \textbf{FastLZ} (C) e \textbf{LZ77-Compressor} (Python). As configurações efetivas foram: \(W=8\,\text{KiB}\) e \(L=264\) bytes no \textit{FastLZ}; no \textit{LZ77-Compressor}, \(W\) variou entre 100 e 400 bytes e \(L=15\) bytes. Na \textit{Komm}, \(W\) e \(L\) são parametrizáveis; para comparação, utilizaram-se configurações próximas às disponíveis nas bibliotecas externas quando pertinente, além de uma configuração de referência com \(W=64\,\text{kB}\).
 
 As Figuras~\ref{fig:external-alice-compression}–\ref{fig:external-alice-time} apresentam os resultados sobre o texto \textit{Alice}; as Figuras~\ref{fig:external-smiley-compression}–\ref{fig:external-smiley-time}, sobre a imagem \textit{smiley}.
 
-\begin{figure}[h]
+\begin{figure}[htp]
   \centering
-  \caption{Texto \textit{Alice}: taxa de compressão.}
+  \caption{Texto \textit{Alice}: taxa de compressão (menor é melhor).}
   \label{fig:external-alice-compression}
   \includegraphics[width=15cm]{figuras/lz77_alice_compression_window.png}
   \fonte{Elaborada pelo autor.}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[htp]
   \centering
   \caption{Texto \textit{Alice}: memória pico.}
   \label{fig:external-alice-memory}
@@ -153,7 +145,7 @@ As Figuras~\ref{fig:external-alice-compression}–\ref{fig:external-alice-time} 
   \fonte{Elaborada pelo autor.}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[htp]
   \centering
   \caption{Texto \textit{Alice}: tempo de compressão.}
   \label{fig:external-alice-time}
@@ -161,21 +153,21 @@ As Figuras~\ref{fig:external-alice-compression}–\ref{fig:external-alice-time} 
   \fonte{Elaborada pelo autor.}
 \end{figure}
 
-Principais observações (texto):
+\noindent\textbf{Síntese (texto).}
 \begin{itemize}
-  \item A implementação FastLZ apresentou um desempenho muito bom em termos de tempo, superando todas as outras implementações, apenas ficando atrás de implementações do \textit{Komm} com janelas maiores.
-  \item A implementação LZ77-Compressor teve um desempenho ruim em termos de tempo, porém o consumo de memória foi menor comparado ao equivalente da biblioteca \textit{Komm}.
+  \item \textit{FastLZ} obteve tempos inferiores, como esperado para uma implementação em C orientada a velocidade; em taxa, aproxima-se das melhores configurações do \textit{LZ77} na \textit{Komm} quando \(W\) é grande.
+  \item \textit{LZ77-Compressor} apresentou maior tempo de execução, mas com consumo de memória contido para janelas pequenas.
 \end{itemize}
 
-\begin{figure}[h]
+\begin{figure}[htp]
   \centering
-  \caption{Imagem \textit{smiley}: taxa de compressão.}
+  \caption{Imagem \textit{smiley}: taxa de compressão (menor é melhor).}
   \label{fig:external-smiley-compression}
   \includegraphics[width=15cm]{figuras/lz77_smiley_compression_window.png}
   \fonte{Elaborada pelo autor.}
 \end{figure}
 
-\begin{figure}[ht]
+\begin{figure}[htp]
   \centering
   \caption{Imagem \textit{smiley}: memória pico.}
   \label{fig:external-smiley-memory}
@@ -183,7 +175,7 @@ Principais observações (texto):
   \fonte{Elaborada pelo autor.}
 \end{figure}
 
-\begin{figure}[ht]
+\begin{figure}[htp]
   \centering
   \caption{Imagem \textit{smiley}: tempo de compressão.}
   \label{fig:external-smiley-time}
@@ -191,9 +183,13 @@ Principais observações (texto):
   \fonte{Elaborada pelo autor.}
 \end{figure}
 
-Principais observações (imagem):
+\noindent\textbf{Síntese (imagem).}
 \begin{itemize}
-  \item As implementações da biblioteca \textit{Komm} superaram ambas as implementações externas em termos de taxa de compressão.
-  \item A implementação FastLZ manteve seu desempenho superior em termos de tempo.
-  \item A implementação LZ77-Compressor continuou apresentando um desempenho ruim em termos de tempo, e desta vez o consumo de memória foi maior comparado ao equivalente da biblioteca \textit{Komm}.
-end{itemize}
+  \item A implementação da \textit{Komm} com janelas maiores superou as variantes externas em taxa de compressão na imagem \textit{smiley}.
+  \item O \textit{FastLZ} manteve vantagem em tempo de execução.
+  \item O \textit{LZ77-Compressor} permaneceu com tempos mais altos; o uso de memória variou conforme o tamanho de janela.
+\end{itemize}
+
+\section{Discussão}
+
+Os resultados confirmam os compromissos clássicos do \textit{LZ77}: (i) janelas maiores favorecem taxas menores (melhor compressão) em fontes com repetições de longo alcance; (ii) o custo em tempo e memória cresce com \(W\); (iii) implementações em C orientadas a desempenho tendem a dominar em tempo, enquanto a versão modular na \textit{Komm} privilegia clareza, reprodutibilidade e integração com os demais módulos da biblioteca. Todas as execuções passaram no teste de integridade (\emph{round trip}).
