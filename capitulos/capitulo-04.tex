@@ -62,7 +62,7 @@ Iniciamos avaliando as implementações já disponíveis na \textit{Komm}: Huffm
   \fonte{Elaborada pelo autor.}
 \end{figure}
 
-\paragraph{Principais observações (texto).}
+Principais observações (texto):
 \begin{itemize}
   \item As variantes do \textit{LZ77} exibem o \emph{trade-off} esperado: janelas maiores melhoram a taxa de compressão, com aumento proporcional de tempo e memória.
   \item \textit{Huffman} e \textit{Shannon--Fano} são muito rápidos e leves em memória, com taxas compatíveis com códigos prefixos estáticos.
@@ -94,9 +94,10 @@ Iniciamos avaliando as implementações já disponíveis na \textit{Komm}: Huffm
   \fonte{Elaborada pelo autor.}
 \end{figure}
 
-\paragraph{Principais observações (imagem).}
+
+Principais observações (imagem):
 \begin{itemize}
-  \item Em imagens com grandes áreas uniformes, o LZ77 se beneficia de janelas maiores (maior chance de reutilizar sequências longas).
+  \item Apesar das imagens terem grandes áreas uniformes, o LZ77 não alcança taxas tão elevadas quanto no texto, e também não supera as outras técnicas.
   \item O custo de tempo/memória cresce com a janela no LZ77, enquanto permanece relativamente estável para Huffman, Shannon--Fano e LZ78/LZW.
 \end{itemize}
 
@@ -121,3 +122,78 @@ Iniciamos avaliando as implementações já disponíveis na \textit{Komm}: Huffm
 \fonteproprioautor
 \end{quadro}
 
+\newpage
+
+\section{Resultados com a biblioteca bibliotecas externas}
+Foram selecionadas as seguintes bibliotecas externas populares no Github para comparação:
+\begin{itemize}
+  \item \textbf{FastLZ\footnote{https://github.com/ariya/FastLZ}}: implementação em C do algoritmo LZ77.
+  \item \textbf{LZ77-Compressor\footnote{https://github.com/manassra/LZ77-Compressor}}: implementação em Python do algoritmo LZ77.
+\end{itemize}
+
+Ambas as implementação não possuem todos parametros ajustáveis como a \textit{Komm}, portanto, foram utilizadas com suas configurações padrão e dentro da biblioteca \textit{Komm} foram passados parâmetros similares para comparação justa.
+O código \textbf{LZ77-Compressor} em tem como configuração apenas o tamanho da janela, que poderia varia do tamanho de 100 até 400 bytes, porém não há como ajustar o tamanho do lookahead buffer que tem o tamnho de 15 bytes. Já o \textbf{FastLZ} não possui nenhuma configuração, sendo assim, foi utilizado o tamanho padrão da janela de 8kB e lookahead buffer de 264 bytes.
+Com isso em mente, foram realizados os testes com as mesmas imagens e textos utilizados anteriormente, e variando a biblioteca komm com parâmetros similares aos das bibliotecas externas.
+
+As Figuras~\ref{fig:external-alice-compression}–\ref{fig:external-alice-time} apresentam os resultados sobre o texto \textit{Alice}; as Figuras~\ref{fig:external-smiley-compression}–\ref{fig:external-smiley-time}, sobre a imagem \textit{smiley}.
+
+\begin{figure}[h]
+  \centering
+  \caption{Texto \textit{Alice}: taxa de compressão.}
+  \label{fig:external-alice-compression}
+  \includegraphics[width=15cm]{figuras/lz77_alice_compression_window.png}
+  \fonte{Elaborada pelo autor.}
+\end{figure}
+
+\begin{figure}[h]
+  \centering
+  \caption{Texto \textit{Alice}: memória pico.}
+  \label{fig:external-alice-memory}
+  \includegraphics[width=15cm]{figuras/lz77_alice_memory_window.png}
+  \fonte{Elaborada pelo autor.}
+\end{figure}
+
+\begin{figure}[h]
+  \centering
+  \caption{Texto \textit{Alice}: tempo de compressão.}
+  \label{fig:external-alice-time}
+  \includegraphics[width=15cm]{figuras/lz77_alice_time_window.png}
+  \fonte{Elaborada pelo autor.}
+\end{figure}
+
+Principais observações (texto):
+\begin{itemize}
+  \item A implementação FastLZ apresentou um desempenho muito bom em termos de tempo, superando todas as outras implementações, apenas ficando atrás de implementações do \textit{Komm} com janelas maiores.
+  \item A implementação LZ77-Compressor teve um desempenho ruim em termos de tempo, porém o consumo de memória foi menor comparado ao equivalente da biblioteca \textit{Komm}.
+\end{itemize}
+
+\begin{figure}[h]
+  \centering
+  \caption{Imagem \textit{smiley}: taxa de compressão.}
+  \label{fig:external-smiley-compression}
+  \includegraphics[width=15cm]{figuras/lz77_smiley_compression_window.png}
+  \fonte{Elaborada pelo autor.}
+\end{figure}
+
+\begin{figure}[ht]
+  \centering
+  \caption{Imagem \textit{smiley}: memória pico.}
+  \label{fig:external-smiley-memory}
+  \includegraphics[width=15cm]{figuras/lz77_smiley_memory_window.png}
+  \fonte{Elaborada pelo autor.}
+\end{figure}
+
+\begin{figure}[ht]
+  \centering
+  \caption{Imagem \textit{smiley}: tempo de compressão.}
+  \label{fig:external-smiley-time}
+  \includegraphics[width=15cm]{figuras/lz77_smiley_time_window.png}
+  \fonte{Elaborada pelo autor.}
+\end{figure}
+
+Principais observações (imagem):
+\begin{itemize}
+  \item As implementações da biblioteca \textit{Komm} superaram ambas as implementações externas em termos de taxa de compressão.
+  \item A implementação FastLZ manteve seu desempenho superior em termos de tempo.
+  \item A implementação LZ77-Compressor continuou apresentando um desempenho ruim em termos de tempo, e desta vez o consumo de memória foi maior comparado ao equivalente da biblioteca \textit{Komm}.
+end{itemize}
