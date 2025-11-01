@@ -27,6 +27,9 @@ principais:
 \]
 \end{itemize}
 
+\paragraph*{Origem do ponteiro.}
+Neste trabalho, seguindo o artigo original do LZ77, \(p\) é medido a partir do \textbf{início} do \emph{search buffer}. \emph{Observação}: algumas implementações didáticas medem a partir do \textbf{fim} do \emph{search buffer}; ambas convenções aparecem com a documentação acessível em \url{} literatura. Mantemos a primeira e documentamos a diferença quando necessário.
+
 
 Durante a codificação, o algoritmo utiliza um ponteiro de correspondência
 (\textit{match pointer}) que percorre o \textit{search buffer} para identificar
