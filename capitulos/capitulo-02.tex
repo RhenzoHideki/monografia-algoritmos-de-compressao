@@ -19,9 +19,14 @@ percorre a sequência de entrada. Essa janela é dividida em duas regiões
 principais:
 
 \begin{itemize}
-  \item \textbf{\textit{$W$ ou Search buffer}}: contém a porção já codificada da sequência, correspondendo ao "passado" armazenado, seu tamanho é de $n - L_{s}$
+  \item \textbf{\textit{$S$ ou Search buffer}}: contém a porção já codificada da sequência, correspondendo ao "passado" armazenado, seu tamanho é de $n - L_{s}$
   \item \textbf{\textit{$L$ ou Lookahead buffer}}: contém a porção da sequência que ainda não foi codificada, representando o "futuro" a ser processado, seu tamanho é de $L_{s}$
+  \item \textbf{\textit{$W$ ou sliding window}}:  W é o tamanho total da janela. onde:
+\[
+    W = S + L,
+\]
 \end{itemize}
+
 
 Durante a codificação, o algoritmo utiliza um ponteiro de correspondência
 (\textit{match pointer}) que percorre o \textit{search buffer} para identificar

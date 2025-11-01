@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.5.3)  1 NOV 2025 08:31
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.5.3)  1 NOV 2025 09:17
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1563,21 +1563,21 @@ File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) [13
 
 
-]) (./capitulos/capitulo-02.tex [14{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}]
-<figuras/DiagramasTCC-LZ77-template.png, id=221, 554.07pt x 188.705pt>
-File: figuras/DiagramasTCC-LZ77-template.png Graphic file (type png)
-<use figuras/DiagramasTCC-LZ77-template.png>
-Package pdftex.def Info: figuras/DiagramasTCC-LZ77-template.png  used on input line 44.
-(pdftex.def)             Requested size: 341.43306pt x 116.28467pt.
- [15
+]) (./capitulos/capitulo-02.tex [14{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}] [15
 
 ]
+<figuras/DiagramasTCC-LZ77-template.png, id=228, 554.07pt x 188.705pt>
+File: figuras/DiagramasTCC-LZ77-template.png Graphic file (type png)
+<use figuras/DiagramasTCC-LZ77-template.png>
+Package pdftex.def Info: figuras/DiagramasTCC-LZ77-template.png  used on input line 49.
+(pdftex.def)             Requested size: 341.43306pt x 116.28467pt.
+
 
 pdfTeX warning: pdflatex (file ./figuras/DiagramasTCC-LZ77-Estado-0.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
 <figuras/DiagramasTCC-LZ77-Estado-0.pdf, id=235, 545.1567pt x 186.6975pt>
 File: figuras/DiagramasTCC-LZ77-Estado-0.pdf Graphic file (type pdf)
 <use figuras/DiagramasTCC-LZ77-Estado-0.pdf>
-Package pdftex.def Info: figuras/DiagramasTCC-LZ77-Estado-0.pdf  used on input line 68.
+Package pdftex.def Info: figuras/DiagramasTCC-LZ77-Estado-0.pdf  used on input line 73.
 (pdftex.def)             Requested size: 426.79134pt x 146.16757pt.
 [16 <./figuras/DiagramasTCC-LZ77-template.png> <./figuras/DiagramasTCC-LZ77-Estado-0.pdf>]
 
@@ -1585,16 +1585,16 @@ pdfTeX warning: pdflatex (file ./figuras/DiagramasTCC-LZ77-Estado-1.pdf): PDF in
 <figuras/DiagramasTCC-LZ77-Estado-1.pdf, id=257, 545.1567pt x 321.11969pt>
 File: figuras/DiagramasTCC-LZ77-Estado-1.pdf Graphic file (type pdf)
 <use figuras/DiagramasTCC-LZ77-Estado-1.pdf>
-Package pdftex.def Info: figuras/DiagramasTCC-LZ77-Estado-1.pdf  used on input line 89.
+Package pdftex.def Info: figuras/DiagramasTCC-LZ77-Estado-1.pdf  used on input line 94.
 (pdftex.def)             Requested size: 426.79134pt x 251.40822pt.
 [17 <./figuras/DiagramasTCC-LZ77-Estado-1.pdf>]
 <figuras/DiagramasTCC-LZ77-Decoding.png, id=277, 703.62875pt x 925.4575pt>
 File: figuras/DiagramasTCC-LZ77-Decoding.png Graphic file (type png)
 <use figuras/DiagramasTCC-LZ77-Decoding.png>
-Package pdftex.def Info: figuras/DiagramasTCC-LZ77-Decoding.png  used on input line 135.
+Package pdftex.def Info: figuras/DiagramasTCC-LZ77-Decoding.png  used on input line 140.
 (pdftex.def)             Requested size: 341.43306pt x 449.0723pt.
  [18 <./figuras/DiagramasTCC-LZ77-Decoding.png>] [19{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}]
-Overfull \hbox (4.6596pt too wide) in paragraph at lines 193--197
+Overfull \hbox (4.6596pt too wide) in paragraph at lines 198--202
 []\T1/lmr/m/n/12 Além disso, a bi-bli-o-teca já dis-po-ni-bi-liza di-ver-sas co-di-fi-ca-ções im-ple-men-ta-das, abran-
  []
 
@@ -1756,7 +1756,7 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  124i,11n,121p,2438b,4454s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmbxi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi12.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr7.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmri12.pfb></usr/share/texmf/fonts/type1/public/lm/lmri8.pfb></usr/share/texmf/fonts/type1/public/lm/lmss10.pfb></usr/share/texmf/fonts/type1/public/lm/lmss12.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsso12.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt12.pfb>
-Output written on monografia.pdf (38 pages, 940538 bytes).
+Output written on monografia.pdf (38 pages, 942954 bytes).
 PDF statistics:
  703 PDF objects out of 1000 (max. 8388607)
  563 compressed objects within 6 object streams
