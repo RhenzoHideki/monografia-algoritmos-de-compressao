@@ -1,61 +1,101 @@
 \chapter{Fundamentação teórica}\label{cap:revisao}
 
 Nesta seção será discutido o funcionamento e as principais características do
-LZ77 e do algoritmo aritmético, com o propósito de permitir ao leitor uma
+LZ77, com o propósito de permitir ao leitor uma
 melhor compreensão dos algoritmos utilizados neste trabalho.
 
 \section{Funcionamento do LZ77}\label{sec:LZ77}
 
 O algoritmo de compressão LZ77, proposto por Ziv e Lempel em
 1977~\cite{1055714}, pertence à classe dos métodos baseados em dicionário.
+Sua principal característica é o uso de uma \textbf{janela deslizante} de
+comprimento fixo \(W\), que percorre sequencialmente a entrada e permite
+substituir repetições por referências a ocorrências anteriores.
 
-O LZ77 consiste em analisar a sequência de entrada de símbolos $S$ pertencentes a um alfabeto finito
-$\mathcal{X}$ dividindo-o em partes menores, no qual o comprimento não deve ultrapassar
-um valor máximo de $L_{c}$. Além disso, estabelece um esquema de codificação que converte essas subcadeias, 
-de forma sequencial, em palavras-código de comprimento fixo $L_{s}$, também sobre o mesmo alfabeto $\mathcal{X}$, garantindo que o processo de decodificação não seja ambíguo~\cite{1055714}.
+\subsection{Estrutura da janela deslizante}
 
-Para realizar a codificação, temos o algoritmo utiliza uma janela deslizante ou buffer que
-percorre a sequência de entrada. Essa janela é dividida em duas regiões
-principais:
+A janela deslizante possui comprimento total \(W\) e é dividida em duas
+partes:
 
 \begin{itemize}
-  \item \textbf{\textit{$S$ ou Search buffer}}: contém a porção já codificada da sequência, correspondendo ao "passado" armazenado, seu tamanho é de $n - L_{s}$
-  \item \textbf{\textit{$L$ ou Lookahead buffer}}: contém a porção da sequência que ainda não foi codificada, representando o "futuro" a ser processado, seu tamanho é de $L_{s}$
-  \item \textbf{\textit{$W$ ou sliding window}}:  W é o tamanho total da janela. onde:
-\[
-    W = S + L,
-\]
+  \item \textbf{\textit{Search buffer}} — de comprimento \(S\): contém a porção
+        da sequência já processada, isto é, o passado disponível para referência;
+  \item \textbf{\textit{Lookahead buffer}} — de comprimento \(L\): contém os
+        próximos símbolos a serem codificados, representando o futuro imediato;
 \end{itemize}
+
+de modo que:
+\[
+  W = S + L.
+\]
+
+Esses três parâmetros (\(W\), \(S\), \(L\)) são comprimentos
+relevantes para o funcionamento do algoritmo. \(W\) determina o tamanho da
+janela total, \(S\) limita o histórico de busca, e \(L\) define o tamanho máximo
+de sequência a ser codificada em um único passo.
+
+\subsection{Formação dos tokens}
+
+Durante a codificação, o algoritmo busca no \textit{search buffer} o maior
+prefixo ocorra dentro do \textit{lookahead buffer}. O resultado dessa
+busca é codificado como um \textbf{token}
+\(\langle p, \ell, x \rangle\), onde:
+
+\begin{itemize}
+  \item \(p\) (\textit{pointer}) é a posição, contada a partir do \textbf{início}
+        do \textit{search buffer}, em que ocorre a correspondência mais longa;
+  \item \(\ell\) (\textit{length}) é o comprimento da sequência coincidente, com
+        \(0 \leq \ell \leq L\);
+  \item \(x \in \mathcal{X}\) é o próximo símbolo literal, que segue a sequência
+        copiada e garante a continuidade da decodificação.
+\end{itemize}
+
+A saída do codificador é, portanto, uma sequência de tokens
+\(\langle p_i, \ell_i, x_i \rangle\), que representam os fatores sucessivos do
+texto de entrada.
 
 \paragraph*{Origem do ponteiro.}
-Neste trabalho, seguindo o artigo original do LZ77, \(p\) é medido a partir do \textbf{início} do \emph{search buffer}. \emph{Observação}: algumas implementações didáticas medem a partir do \textbf{fim} do \emph{search buffer}; ambas convenções aparecem com a documentação acessível em \url{} literatura. Mantemos a primeira e documentamos a diferença quando necessário.
+Seguindo a convenção do artigo original de Ziv e Lempel~\cite{1055714}, o
+ponteiro \(p\) é medido a partir do \textbf{início} do \textit{search buffer}.
+Essa escolha difere de algumas implementações posteriores, nas quais \(p\) é
+medido a partir do \textbf{fim} do buffer, mas ambas produzem resultados
+equivalentes.
 
-
-Durante a codificação, o algoritmo utiliza um ponteiro de correspondência
-(\textit{match pointer}) que percorre o \textit{search buffer} para identificar
-o maior prefixo do \textit{lookahead buffer} que também ocorra ali. Quando uma
-correspondência é encontrada, ela é codificada como um token $\langle p, \ell,
-  x \rangle$, onde:
-\begin{itemize}
-  \item $p$ (\textit{pointer}): p é o deslocamento dentro da janela (endereçando uma posição anterior no buffer)
-  \item $\ell$ (\textit{length}): comprimento da sequência que será codificada limitado a $L_{s}$;
-  \item $x$ (\textit{character}): $x \in \mathcal{X}$, é o próximo caractere literal que segue a sequência codificada.
-\end{itemize}
-
-A Figura~\ref{fig:Diagrama LZ77} ilustra essa estrutura, destacando as divisões
-da janela deslizante e o funcionamento da busca por correspondências.
+A Figura~\ref{fig:Diagrama LZ77} ilustra a estrutura da janela deslizante e o
+processo de busca pelo maior prefixo coincidente.
 
 \begin{figure}[ht]
   \centering
-  \caption{Divisão da janela deslizante no algoritmo LZ77}
+  \caption{Divisão da janela deslizante no algoritmo LZ77.}
   \label{fig:Diagrama LZ77}
   \includegraphics[width=12cm]{figuras/DiagramasTCC-LZ77-template}
-  \fonte{Adaptada de \textcite{sayood2012introduction}}
+  \fonte{Adaptada de \textcite{sayood2012introduction}.}
 \end{figure}
 
-Este mecanismo permite substituir sequências repetidas por referências a
-ocorrências anteriores, resultando em compressões eficazes especialmente para
-dados com alta redundância.
+\subsection{Codificação e exemplo}
+
+O processo de codificação pode ser descrito como:
+
+\begin{enumerate}
+  \item Identificar no \textit{search buffer} o maior trecho que coincide com o
+        início do \textit{lookahead buffer};
+  \item Gerar o token \(\langle p, \ell, x \rangle\), em que \(x\) é o próximo
+        símbolo literal após a correspondência;
+  \item Avançar a janela em \(\ell + 1\) posições e repetir o processo.
+\end{enumerate}
+
+Como exemplo, considere a sequência \texttt{"cabracadabrarrarrad"},
+com parâmetros \(W = 13\) e \(L = 6\). O \textit{search buffer} inicial contém
+\texttt{"cabraca"}. O primeiro caractere a ser codificado é \texttt{"d"}, para o
+qual não há correspondência anterior, resultando no token
+\(\langle 6, 0, \texttt{d} \rangle\). Após o avanço da janela, o algoritmo
+encontra no histórico a sequência \texttt{"abra"}, gerando o token
+\(\langle 0, 4, \texttt{r} \rangle\), e assim sucessivamente.
+
+Durante a decodificação, cada token é expandido de acordo com \(p\) e \(\ell\),
+copiando o trecho correspondente do histórico decodificado e adicionando o
+símbolo literal \(x\). Dessa forma, o processo é perfeitamente reversível e sem
+perdas.
 
 % Aqui
 \subsection{Exemplo de Codificação com LZ77}\label{sec:LZ77_exemplo}

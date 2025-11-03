@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.5.3)  1 NOV 2025 10:06
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.5.3)  3 NOV 2025 11:34
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1551,9 +1551,9 @@ File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 
 ] (./monografia.acr) (./monografia.sls) (./monografia.toc
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <12> not available
-(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 24.
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 29.
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <12> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 32.
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 35.
 ) [12
 
 
@@ -1568,44 +1568,49 @@ File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ]) (./capitulos/capitulo-02.tex [14{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}] [15
 
 ]
-<figuras/DiagramasTCC-LZ77-template.png, id=238, 554.07pt x 188.705pt>
+<figuras/DiagramasTCC-LZ77-template.png, id=235, 554.07pt x 188.705pt>
 File: figuras/DiagramasTCC-LZ77-template.png Graphic file (type png)
 <use figuras/DiagramasTCC-LZ77-template.png>
-Package pdftex.def Info: figuras/DiagramasTCC-LZ77-template.png  used on input line 52.
+Package pdftex.def Info: figuras/DiagramasTCC-LZ77-template.png  used on input line 71.
 (pdftex.def)             Requested size: 341.43306pt x 116.28467pt.
-
+ [16 <./figuras/DiagramasTCC-LZ77-template.png>]
 
 pdfTeX warning: pdflatex (file ./figuras/DiagramasTCC-LZ77-Estado-0.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<figuras/DiagramasTCC-LZ77-Estado-0.pdf, id=245, 545.1567pt x 186.6975pt>
+<figuras/DiagramasTCC-LZ77-Estado-0.pdf, id=253, 545.1567pt x 186.6975pt>
 File: figuras/DiagramasTCC-LZ77-Estado-0.pdf Graphic file (type pdf)
 <use figuras/DiagramasTCC-LZ77-Estado-0.pdf>
-Package pdftex.def Info: figuras/DiagramasTCC-LZ77-Estado-0.pdf  used on input line 76.
+Package pdftex.def Info: figuras/DiagramasTCC-LZ77-Estado-0.pdf  used on input line 116.
 (pdftex.def)             Requested size: 426.79134pt x 146.16757pt.
 
 
 pdfTeX warning: pdflatex (file ./figuras/DiagramasTCC-LZ77-Estado-1.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<figuras/DiagramasTCC-LZ77-Estado-1.pdf, id=251, 545.1567pt x 321.11969pt>
+<figuras/DiagramasTCC-LZ77-Estado-1.pdf, id=259, 545.1567pt x 321.11969pt>
 File: figuras/DiagramasTCC-LZ77-Estado-1.pdf Graphic file (type pdf)
 <use figuras/DiagramasTCC-LZ77-Estado-1.pdf>
-Package pdftex.def Info: figuras/DiagramasTCC-LZ77-Estado-1.pdf  used on input line 97.
+Package pdftex.def Info: figuras/DiagramasTCC-LZ77-Estado-1.pdf  used on input line 137.
 (pdftex.def)             Requested size: 426.79134pt x 251.40822pt.
-[16 <./figuras/DiagramasTCC-LZ77-template.png>] [17 <./figuras/DiagramasTCC-LZ77-Estado-0.pdf> <./figuras/DiagramasTCC-LZ77-Estado-1.pdf>]
-<figuras/DiagramasTCC-LZ77-Decoding.png, id=287, 703.62875pt x 925.4575pt>
+[17 <./figuras/DiagramasTCC-LZ77-Estado-0.pdf>]
+<figuras/DiagramasTCC-LZ77-Decoding.png, id=279, 703.62875pt x 925.4575pt>
 File: figuras/DiagramasTCC-LZ77-Decoding.png Graphic file (type png)
 <use figuras/DiagramasTCC-LZ77-Decoding.png>
-Package pdftex.def Info: figuras/DiagramasTCC-LZ77-Decoding.png  used on input line 143.
+Package pdftex.def Info: figuras/DiagramasTCC-LZ77-Decoding.png  used on input line 183.
 (pdftex.def)             Requested size: 341.43306pt x 449.0723pt.
- [18{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}] [19 <./figuras/DiagramasTCC-LZ77-Decoding.png>] [20]
-Overfull \hbox (4.6596pt too wide) in paragraph at lines 201--205
+ [18 <./figuras/DiagramasTCC-LZ77-Estado-1.pdf>] [19{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc} <./figuras/DiagramasTCC-LZ77-Decoding.png>] [20]
+Overfull \hbox (4.6596pt too wide) in paragraph at lines 241--245
 []\T1/lmr/m/n/12 Além disso, a bi-bli-o-teca já dis-po-ni-bi-liza di-ver-sas co-di-fi-ca-ções im-ple-men-ta-das, abran-
  []
 
 ) (./capitulos/capitulo-03.tex [21]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 39.
+(Font)              <5> on input line 12.
 
-Overfull \hbox (18.86922pt too wide) in paragraph at lines 45--52
-\T1/lmr/m/n/12 al-fa-beto de saída (\T1/lmtt/m/n/12 target_cardinality\T1/lmr/m/n/12 ), o ta-ma-nho to-tal da ja-nela des-li-zante (\T1/lmtt/m/n/12 window_size\T1/lmr/m/n/12 )
+Overfull \hbox (52.71225pt too wide) in paragraph at lines 27--29
+[]\T1/lmr/m/n/12 validar a cor-re-tude do mó-dulo por meio de tes-tes uni-tá-rios e de \T1/lmr/m/it/12 round trip \T1/lmr/m/n/12 (\T1/lmtt/m/n/12 decode(encode(x))
+ []
+
+
+Overfull \hbox (17.96689pt too wide) in paragraph at lines 34--43
+\T1/lmr/m/n/12 en-trada (\T1/lmtt/m/n/12 source_cardinality\T1/lmr/m/n/12 ), a car-di-na-li-dade do al-fa-beto de saída (\T1/lmtt/m/n/12 target_cardinality\T1/lmr/m/n/12 ),
  []
 
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
@@ -1614,190 +1619,13 @@ File: lstlang1.sty 2023/02/27 1.9 listings language file
 File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
 ) [22
 
-] [23]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\begingroup' on input line 154.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\catcode' on input line 154.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\active' on input line 154.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\<def>-command' on input line 154.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\csname\endcsname' on input line 154.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\catcode' on input line 154.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\active' on input line 154.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\<let>-command' on input line 154.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\csname\endcsname' on input line 154.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\<let>-command' on input line 154.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\%' on input line 154.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\catcode' on input line 154.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\active' on input line 154.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\<def>-command' on input line 154.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\csname\endcsname' on input line 154.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\<def>-command' on input line 154.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\#' on input line 154.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\catcode' on input line 154.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\<def>-command' on input line 154.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\csname\endcsname' on input line 154.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\<def>-command' on input line 154.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\&' on input line 154.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\<def>-command' on input line 154.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\textunderscore' on input line 154.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\<let>-command' on input line 154.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\_' on input line 154.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\catcode' on input line 154.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\active' on input line 154.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\<let>-command' on input line 154.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\csname\endcsname' on input line 154.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\<let>-command' on input line 154.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\csname\endcsname' on input line 154.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\<let>-command' on input line 154.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\~' on input line 154.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\<let>-command' on input line 154.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\textasciitilde' on input line 154.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\<let>-command' on input line 154.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\\' on input line 154.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\<def>-command' on input line 154.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\csname\endcsname' on input line 154.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\<def>-command' on input line 154.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\Hy@tempa' on input line 154.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\<def>-command' on input line 154.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\Hy@tempa' on input line 154.
-
-[24]) (./capitulos/capitulo-04.tex [25]
-<figuras/smiley-large.png, id=403, 244.915pt x 241.90375pt>
+] [23]) (./capitulos/capitulo-04.tex [24] [25]
+<figuras/smiley-large.png, id=382, 244.915pt x 241.90375pt>
 File: figuras/smiley-large.png Graphic file (type png)
 <use figuras/smiley-large.png>
 Package pdftex.def Info: figuras/smiley-large.png  used on input line 19.
 (pdftex.def)             Requested size: 142.26378pt x 140.51836pt.
-<figuras/snail.png, id=406, 256.96pt x 256.96pt>
+<figuras/snail.png, id=385, 256.96pt x 256.96pt>
 File: figuras/snail.png Graphic file (type png)
 <use figuras/snail.png>
 Package pdftex.def Info: figuras/snail.png  used on input line 27.
@@ -1813,81 +1641,81 @@ Overfull \hbox (36.98337pt too wide) in paragraph at lines 44--45
 []\T1/lmr/m/n/12 Foram con-si-de-ra-das duas im-ple-men-ta-ções po-pu-la-res: \T1/lmr/bx/n/12 Fas-tLZ[][][][][] \T1/lmr/m/n/12 (C) e \T1/lmr/bx/n/12 LZ77-Compressor[][][][][]
  []
 
-<figuras/komm_alice_compression.png, id=416, 714.7503pt x 281.853pt>
+<figuras/komm_alice_compression.png, id=395, 714.7503pt x 281.853pt>
 File: figuras/komm_alice_compression.png Graphic file (type png)
 <use figuras/komm_alice_compression.png>
 Package pdftex.def Info: figuras/komm_alice_compression.png  used on input line 50.
 (pdftex.def)             Requested size: 426.79134pt x 168.30457pt.
-<figuras/komm_alice_memory.png, id=417, 714.7503pt x 281.853pt>
+<figuras/komm_alice_memory.png, id=396, 714.7503pt x 281.853pt>
 File: figuras/komm_alice_memory.png Graphic file (type png)
 <use figuras/komm_alice_memory.png>
 Package pdftex.def Info: figuras/komm_alice_memory.png  used on input line 58.
 (pdftex.def)             Requested size: 426.79134pt x 168.30457pt.
-<figuras/komm_alice_time.png, id=418, 714.7503pt x 281.853pt>
+<figuras/komm_alice_time.png, id=397, 714.7503pt x 281.853pt>
 File: figuras/komm_alice_time.png Graphic file (type png)
 <use figuras/komm_alice_time.png>
 Package pdftex.def Info: figuras/komm_alice_time.png  used on input line 66.
 (pdftex.def)             Requested size: 426.79134pt x 168.30457pt.
 [27 <./figuras/snail.png (PNG copy)>] [28 <./figuras/komm_alice_compression.png> <./figuras/komm_alice_memory.png> <./figuras/komm_alice_time.png>]
-<figuras/komm_smiley_compression.png, id=433, 714.7503pt x 281.853pt>
+<figuras/komm_smiley_compression.png, id=411, 714.7503pt x 281.853pt>
 File: figuras/komm_smiley_compression.png Graphic file (type png)
 <use figuras/komm_smiley_compression.png>
 Package pdftex.def Info: figuras/komm_smiley_compression.png  used on input line 81.
 (pdftex.def)             Requested size: 426.79134pt x 168.30457pt.
-<figuras/komm_smiley_memory.png, id=434, 714.7503pt x 281.853pt>
+<figuras/komm_smiley_memory.png, id=412, 714.7503pt x 281.853pt>
 File: figuras/komm_smiley_memory.png Graphic file (type png)
 <use figuras/komm_smiley_memory.png>
 Package pdftex.def Info: figuras/komm_smiley_memory.png  used on input line 89.
 (pdftex.def)             Requested size: 426.79134pt x 168.30457pt.
-<figuras/komm_smiley_time.png, id=435, 714.7503pt x 281.853pt>
+<figuras/komm_smiley_time.png, id=413, 714.7503pt x 281.853pt>
 File: figuras/komm_smiley_time.png Graphic file (type png)
 <use figuras/komm_smiley_time.png>
 Package pdftex.def Info: figuras/komm_smiley_time.png  used on input line 97.
 (pdftex.def)             Requested size: 426.79134pt x 168.30457pt.
-<figuras/komm_snail_compression.png, id=436, 714.7503pt x 281.853pt>
+<figuras/komm_snail_compression.png, id=414, 714.7503pt x 281.853pt>
 File: figuras/komm_snail_compression.png Graphic file (type png)
 <use figuras/komm_snail_compression.png>
 Package pdftex.def Info: figuras/komm_snail_compression.png  used on input line 105.
 (pdftex.def)             Requested size: 426.79134pt x 168.30457pt.
-<figuras/komm_snail_memory.png, id=437, 714.7503pt x 281.853pt>
+<figuras/komm_snail_memory.png, id=415, 714.7503pt x 281.853pt>
 File: figuras/komm_snail_memory.png Graphic file (type png)
 <use figuras/komm_snail_memory.png>
 Package pdftex.def Info: figuras/komm_snail_memory.png  used on input line 113.
 (pdftex.def)             Requested size: 426.79134pt x 168.30457pt.
-<figuras/komm_snail_time.png, id=438, 714.7503pt x 281.853pt>
+<figuras/komm_snail_time.png, id=416, 714.7503pt x 281.853pt>
 File: figuras/komm_snail_time.png Graphic file (type png)
 <use figuras/komm_snail_time.png>
 Package pdftex.def Info: figuras/komm_snail_time.png  used on input line 121.
 (pdftex.def)             Requested size: 426.79134pt x 168.30457pt.
  [29 <./figuras/komm_smiley_compression.png> <./figuras/komm_smiley_memory.png>] [30 <./figuras/komm_smiley_time.png> <./figuras/komm_snail_compression.png> <./figuras/komm_snail_memory.png>]
-<figuras/lz77_alice_compression_window.png, id=457, 642.4803pt x 353.4003pt>
+<figuras/lz77_alice_compression_window.png, id=436, 642.4803pt x 353.4003pt>
 File: figuras/lz77_alice_compression_window.png Graphic file (type png)
 <use figuras/lz77_alice_compression_window.png>
 Package pdftex.def Info: figuras/lz77_alice_compression_window.png  used on input line 168.
 (pdftex.def)             Requested size: 426.79134pt x 234.76018pt.
  [31 <./figuras/komm_snail_time.png>]
-<figuras/lz77_alice_memory_window.png, id=465, 642.4803pt x 354.123pt>
+<figuras/lz77_alice_memory_window.png, id=444, 642.4803pt x 354.123pt>
 File: figuras/lz77_alice_memory_window.png Graphic file (type png)
 <use figuras/lz77_alice_memory_window.png>
 Package pdftex.def Info: figuras/lz77_alice_memory_window.png  used on input line 176.
 (pdftex.def)             Requested size: 426.79134pt x 235.24026pt.
-<figuras/lz77_alice_time_window.png, id=466, 642.4803pt x 353.4003pt>
+<figuras/lz77_alice_time_window.png, id=445, 642.4803pt x 353.4003pt>
 File: figuras/lz77_alice_time_window.png Graphic file (type png)
 <use figuras/lz77_alice_time_window.png>
 Package pdftex.def Info: figuras/lz77_alice_time_window.png  used on input line 184.
 (pdftex.def)             Requested size: 426.79134pt x 234.76018pt.
  [32 <./figuras/lz77_alice_compression_window.png> <./figuras/lz77_alice_memory_window.png>]
-<figuras/lz77_smiley_compression_window.png, id=473, 642.4803pt x 353.4003pt>
+<figuras/lz77_smiley_compression_window.png, id=452, 642.4803pt x 353.4003pt>
 File: figuras/lz77_smiley_compression_window.png Graphic file (type png)
 <use figuras/lz77_smiley_compression_window.png>
 Package pdftex.def Info: figuras/lz77_smiley_compression_window.png  used on input line 199.
 (pdftex.def)             Requested size: 426.79134pt x 234.76018pt.
-<figuras/lz77_smiley_memory_window.png, id=474, 642.4803pt x 354.123pt>
+<figuras/lz77_smiley_memory_window.png, id=453, 642.4803pt x 354.123pt>
 File: figuras/lz77_smiley_memory_window.png Graphic file (type png)
 <use figuras/lz77_smiley_memory_window.png>
 Package pdftex.def Info: figuras/lz77_smiley_memory_window.png  used on input line 207.
 (pdftex.def)             Requested size: 426.79134pt x 235.24026pt.
-<figuras/lz77_smiley_time_window.png, id=475, 643.203pt x 353.4003pt>
+<figuras/lz77_smiley_time_window.png, id=454, 643.203pt x 353.4003pt>
 File: figuras/lz77_smiley_time_window.png Graphic file (type png)
 <use figuras/lz77_smiley_time_window.png>
 Package pdftex.def Info: figuras/lz77_smiley_time_window.png  used on input line 215.
@@ -1933,18 +1761,18 @@ Package logreq Info: Writing requests to 'monografia.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 47452 strings out of 474222
- 893685 string characters out of 5748734
- 2113975 words of memory out of 5000000
- 68753 multiletter control sequences out of 15000+600000
+ 47435 strings out of 474222
+ 893358 string characters out of 5748734
+ 2054975 words of memory out of 5000000
+ 68748 multiletter control sequences out of 15000+600000
  637551 words of font info for 84 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 124i,12n,121p,2438b,4454s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmbxi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi12.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr7.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmri12.pfb></usr/share/texmf/fonts/type1/public/lm/lmri8.pfb></usr/share/texmf/fonts/type1/public/lm/lmss10.pfb></usr/share/texmf/fonts/type1/public/lm/lmss12.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsso12.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf/fonts/type1/public/lm/lmtk10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt12.pfb>
-Output written on monografia.pdf (40 pages, 975572 bytes).
+ 124i,11n,121p,2438b,4454s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmbxi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi12.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr7.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmri12.pfb></usr/share/texmf/fonts/type1/public/lm/lmri8.pfb></usr/share/texmf/fonts/type1/public/lm/lmss10.pfb></usr/share/texmf/fonts/type1/public/lm/lmss12.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsso12.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtk10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt12.pfb>
+Output written on monografia.pdf (40 pages, 964552 bytes).
 PDF statistics:
- 770 PDF objects out of 1000 (max. 8388607)
- 624 compressed objects within 7 object streams
- 175 named destinations out of 1000 (max. 500000)
- 414 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 752 PDF objects out of 1000 (max. 8388607)
+ 609 compressed objects within 7 object streams
+ 163 named destinations out of 1000 (max. 500000)
+ 438 words of extra memory for PDF output out of 10000 (max. 10000000)
 

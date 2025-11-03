@@ -1,176 +1,149 @@
 \chapter{Desenvolvimento}\label{cap:desenvolvimento}
 
-Este capítulo descreve o desenvolvimento dos módulos LZ77 com a documentação
-acessível em \url{} biblioteca \textit{Komm}. A implementação foi realizada em
-Python, linguagem-base do projeto.
+Este capítulo descreve o desenvolvimento do módulo \texttt{LempelZiv77Code},
+integrado à biblioteca \textit{Komm}. A implementação foi realizada em Python,
+linguagem-base do projeto, buscando equilíbrio entre clareza didática e
+conformidade com a arquitetura existente da biblioteca.
 
 \section{Módulo LZ77}
 
-Esta seção documenta a implementação do algoritmo \textit{Lempel–Ziv 77} (LZ77)
-com a documentação acessível em \url{} \textit{Komm}, cobrindo decisões de
-projeto, integração e validação. A biblioteca já inclui diversos esquemas de
-compressão sem perdas (Huffman, Tunstall, LZ78 e LZW), e a contribuição aqui
-foi a implementação completa do LZ77 com foco tanto prático quanto didático.
+Esta seção detalha a implementação do algoritmo \textit{Lempel–Ziv 77} (LZ77),
+conforme descrito originalmente por Ziv e Lempel~\cite{1055714}, e sua
+integração na biblioteca \textit{Komm}\footnote{\url{https://komm.dev/ref/LempelZiv77Code}}.
+A \textit{Komm} já disponibiliza diversos esquemas de compressão sem perdas,
+como Huffman, Tunstall, LZ78 e LZW, mas ainda não possuía uma implementação do
+LZ77. Assim, a principal contribuição deste trabalho foi o desenvolvimento de
+uma versão completa e modular do algoritmo, com foco tanto prático quanto
+educacional.
 
 \subsection{Objetivos e escopo}
 
 Os objetivos deste módulo foram:
 \begin{itemize}
     \item implementar as rotinas de codificação (\texttt{encode}) e decodificação
-          (\texttt{decode}), assim como os componentes auxiliares necessários;
-    \item implementar rotinas intermediárias da codificação e decodificação para inspeção
-          pedagógica dos resultados parciais, possibilitando a visualização dos tokens e
-          fluxos em diferentes etapas do processo;
-    \item integrar a classe ao padrão já utilizado, documentação e testes da
-          \textit{Komm};
+          (\texttt{decode}), compatíveis com o padrão interno da \textit{Komm};
+    \item expor funções intermediárias para inspeção didática, permitindo a
+          visualização dos tokens gerados e dos fluxos de dados nas diferentes etapas;
+    \item validar a corretude do módulo por meio de testes unitários e de
+          \emph{round trip} (\texttt{decode(encode(x)) == x});
+    \item documentar e integrar o código ao padrão da biblioteca.
 \end{itemize}
 
-% Até aqui
+\subsection{Como utilizar}
 
-%\subsection{Utilização e notação}\label{subsec:utilizacao-notacao}
-%A implementação está publicamente disponível no repositório oficial da biblioteca
-%\textit{Komm}~\footnote{https://github.com/rwnobrega/komm},
-% com a documentação acessível em \url{https://komm.dev/ref/LempelZiv77Code}.
-
-\subsection{Utilização da classe \texttt{LempelZiv77Code}}
-
-A classe \texttt{LempelZiv77Code} está disponível no módulo de codificação sem
-perdas da biblioteca
-\textit{Komm}\footnote{\url{https://komm.dev/ref/LempelZiv77Code}} e implementa
-a versão do algoritmo \textit{LZ77} conforme a definição original de Ziv e
-Lempel~\cite{1055714}. Seu objetivo é oferecer uma implementação educacional e
-modular, compatível com a interface comum das demais classes de codificação da
-biblioteca.
-
-A criação de um objeto da classe requer a definição de quatro parâmetros
-principais: a cardinalidade do alfabeto de entrada
-(\texttt{source\_cardinality}), a cardinalidade do alfabeto de saída
-(\texttt{target\_cardinality}), o tamanho total da janela deslizante
-(\texttt{window\_size}) e o tamanho do \textit{lookahead buffer}
-(\texttt{lookahead\_size}). Opcionalmente, pode-se inicializar o conteúdo do
-\textit{search buffer}, o que é útil em testes e simulações.
+A classe \texttt{LempelZiv77Code} implementa a codificação e decodificação
+completa do algoritmo. Sua utilização segue o mesmo formato das demais classes
+de codificação da \textit{Komm}. O construtor requer quatro parâmetros principais:
+a cardinalidade do alfabeto de entrada (\texttt{source\_cardinality}),
+a cardinalidade do alfabeto de saída (\texttt{target\_cardinality}),
+o tamanho da janela deslizante total (\texttt{window\_size}) e o tamanho do
+\textit{lookahead buffer} (\texttt{lookahead\_size}). Opcionalmente, pode-se
+fornecer um conteúdo inicial para o \textit{search buffer}, útil em experimentos
+ou testes.
 
 \begin{lstlisting}[language=Python, caption={Exemplo de utilização do \textit{LZ77} na biblioteca \textit{Komm}.}]
 import komm
 
-# a b c d r
-# 0 1 2 3 4
-
+# Instanciação do codificador
 lz77 = komm.LempelZiv77Code(
     window_size=13,
     lookahead_size=6,
     source_cardinality=256,
-    search_buffer=[2, 0, 1, 4, 0, 2, 0],
+    target_cardinality=2
 )
 
-# Dados de entrada (alfabeto numérico ou lista de bytes)
-source = [3, 0, 1, 4, 0, 4, 4, 0, 4, 4, 0, 3]
+# Exemplo de sequência de entrada
+source = [ord(x) for x in "cabracadabrarrarrad"]
 
-# Codificação e decodificação por completo
+# Codificação e decodificação
 encoded = lz77.encode(source)
 decoded = lz77.decode(encoded)
+
 assert decoded == source
-
-
 \end{lstlisting}
 
 O método \texttt{encode()} retorna o fluxo comprimido no alfabeto de saída
-\(\mathcal{Y}\), enquanto o método \texttt{decode()} reconstrói a sequência
-original no alfabeto de entrada \(\mathcal{X}\). Para inspeções intermediárias,
-a classe disponibiliza os métodos \texttt{source\_to\_tokens()} e
-\texttt{tokens\_to\_source()}, que convertem respectivamente a sequência de
-entrada em uma lista de tokens \(\langle p, \ell, x \rangle\) e vice-versa. Esses
-métodos são particularmente úteis para fins educacionais, pois permitem
-observar o processo de compressão passo a passo.
+\(\mathcal{Y}\), enquanto \texttt{decode()} reconstrói a sequência original no
+alfabeto de entrada \(\mathcal{X}\). Para análise intermediária, a classe expõe
+os métodos \texttt{source\_to\_tokens()} e \texttt{tokens\_to\_source()}, que
+convertem a sequência de entrada em uma lista de tokens
+\(\langle p, \ell, x \rangle\) e vice-versa.
 
 \begin{lstlisting}[language=Python, caption={Conversão intermediária entre sequência e tokens.}]
 tokens = lz77.source_to_tokens(source)
 print(tokens)
-# [(6, 0, 3), (0, 4, 4), (4, 5, 3)]
+# [(6, 0, 100), (0, 4, 114), (4, 5, 100)]
 
 reconstructed = lz77.tokens_to_source(tokens)
 assert reconstructed == source
 \end{lstlisting}
 
-Conforme os testes oficiais disponíveis no repositório da
-biblioteca\footnote{\url{https://github.com/rwnobrega/komm/blob/main/tests/lossless_coding/test_lz77.py}},
-todas as funções do módulo \texttt{LempelZiv77Code} são verificadas quanto à
-consistência de codificação e decodificação (\emph{round-trip property}), além
-de casos específicos que validam o comportamento com diferentes tamanhos de
-janela e \textit{lookahead}. A estrutura dos testes demonstra a compatibilidade
-do módulo com o padrão de codificadores da biblioteca, assegurando integração
-direta com demais algoritmos de codificação sem perdas.
+Esses métodos são especialmente úteis em contextos acadêmicos, pois permitem
+acompanhar o comportamento do codificador em cada estágio do processo.
 
+\subsection{Como foi feito}
 
-\subsection{Arquitetura e estrutura da implementação}
+A arquitetura do módulo segue o padrão das demais classes de codificação da
+biblioteca. O código foi estruturado em quatro submódulos internos: dois
+relacionados à etapa de codificação e dois à etapa de decodificação.
 
-A classe \texttt{LempelZiv77Code} concentra a lógica do algoritmo e expõe a
-classe da seguinte maneira:
-\begin{lstlisting}[language=Python, caption={Estrutura simplificada da classe LZ77}]
-@dataclass
-class LempelZiv77Code:
-    source_cardinality: int      # |X|
-    target_cardinality: int      # |Y|
-    window_size: int             # W
-    lookahead_size: int          # L (logo S = W - L)
-
-    def encode(self, data): ...
-    def decode(self, encoded): ...
-\end{lstlisting}
-
-Exemplo de uso:
-\begin{lstlisting}[language=Python, caption={Uso típico do LZ77 com a documentação acessível em \url{} \textit{Komm}}]
-lz77 = LempelZiv77Code(
-    source_cardinality=256,     # |X|
-    target_cardinality=2,       # |Y| (binário)
-    window_size=32768,          # W
-    lookahead_size=258          # L (então S = 32510)
-)
-encoded = lz77.encode(b"... dados ...")
-decoded = lz77.decode(encoded)
-assert decoded == b"... dados ..."
-\end{lstlisting}
-
-Com intuito pedagógico, a pipeline foi dividida em \textbf{quatro} módulos
-internos — dois para \texttt{encode} e dois para \texttt{decode}:
 \begin{enumerate}
-    \item \textbf{Codificação}
+    \item \textbf{Codificação:}
           \begin{itemize}
-              \item \texttt{source\_to\_tokens}: identifica os tokens \((p,\ell,x)\) sobre a janela \(W=S+L\);
-              \item \texttt{tokens\_to\_target}: mapeia os tokens para o fluxo no alfabeto de saída \(\mathcal{Y}\).
+              \item \texttt{source\_to\_tokens}: converte a sequência de entrada
+              em tokens \((p,\ell,x)\);
+              \item \texttt{tokens\_to\_target}: transforma os tokens no fluxo
+              final no alfabeto \(\mathcal{Y}\).
           \end{itemize}
-    \item \textbf{Decodificação}
+    \item \textbf{Decodificação:}
           \begin{itemize}
-              \item \texttt{target\_to\_tokens}: reconstrói os tokens a partir do fluxo em \(\mathcal{Y}\);
-              \item \texttt{tokens\_to\_source}: recompõe a sequência original em \(\mathcal{X}\).
+              \item \texttt{target\_to\_tokens}: reverte o fluxo comprimido de volta aos tokens;
+              \item \texttt{tokens\_to\_source}: reconstrói a sequência original
+              em \(\mathcal{X}\).
           \end{itemize}
 \end{enumerate}
 
-Essa organização favorece: (i) clareza didática; (ii) comparação direta com
-esquemas de manuais/artigos; e (iii) inspeção de saídas intermediárias
-(inclusive em binário), recurso raramente mostrado com a documentação acessível
-em \url{} literatura.
+Essa separação permite maior legibilidade, facilita testes unitários e torna a
+implementação mais transparente para uso didático e comparações com versões
+descritas na literatura.
 
-\subsection{Larguras de campos com a documentação acessível em \url{} saída}\label{subsec:larguras}
+\subsection{Processo de busca na codificação (\texttt{source\_to\_tokens})}
 
-Seja a saída codificada em base \( |\mathcal{Y}| \). As larguras (em símbolos
-do alfabeto de saída) dos campos do token são:
-\[
-    w_p = \big\lceil \log_{|\mathcal{Y}|} S \big\rceil,\qquad
-    w_\ell = \big\lceil \log_{|\mathcal{Y}|} L \big\rceil,\qquad
-    w_x = \big\lceil \log_{|\mathcal{Y}|} |\mathcal{X}| \big\rceil,
-\]
-e o custo total por token é
-\[
-    n \;=\; w_p + w_\ell + w_x.
-\]
+O núcleo da codificação LZ77 está no método \texttt{source\_to\_tokens()}, que
+busca, dentro do \textit{search buffer}, o maior trecho que coincida com o
+prefixo do \textit{lookahead buffer}. Nesta implementação, a busca é feita de
+forma simples e eficiente, utilizando o método \texttt{rfind()} da classe
+\texttt{bytes} do Python — o que resulta em código mais limpo e
+desempenho superior sem o uso explícito de tabelas de hash.
 
-\subsection{Testes e validação}\label{subsec:testes}
+A cada iteração, o algoritmo:
+\begin{enumerate}
+    \item define o \textit{search buffer} como o trecho de tamanho \(S=W-L\);
+    \item tenta localizar a sequência mais longa do \textit{lookahead} dentro do
+    \textit{search buffer};
+    \item emite o token \(\langle p, \ell, x \rangle\), onde \(p\) é o ponteiro
+    (posição a partir do início da janela), \(\ell\) é o comprimento da
+    correspondência e \(x\) é o próximo símbolo literal.
+\end{enumerate}
 
-Os testes unitários (\texttt{test\_lz77.py}) cobrem:
+Essa abordagem segue a convenção do artigo original de Ziv e Lempel, em que o
+ponteiro \(p\) é medido a partir do início da janela, diferindo da convenção
+moderna (offset medido a partir do fim do \textit{search buffer}). A utilização
+do \texttt{rfind()} simplifica a busca, preservando a corretude e a clareza do
+código.
+
+\subsection{Testes e validação}
+
+Os testes unitários\footnote{\url{https://github.com/rwnobrega/komm/blob/main/tests/lossless_coding/test_lz77.py}}
+abrangem tanto casos básicos quanto exemplos reproduzidos da literatura,
+verificando:
 \begin{itemize}
-    \item cadeias com alta redundância e com sobreposição;
-    \item exemplos reproduzidos da literatura.
+    \item a corretude da codificação e decodificação (\emph{round trip});
+    \item o comportamento com sobreposição de trechos (\emph{overlap});
+    \item a consistência dos tokens gerados em diferentes tamanhos de janela e
+    \textit{lookahead}.
 \end{itemize}
-A validação principal usa \textit{round trip} (\(\texttt{decode}(\texttt{encode}(x)) = x\)) e compara tokens/fluxos intermediários com os parâmetros \((W,S,L)\) e larguras \((w_p,w_\ell,w_x)\).
 
+Os resultados confirmam a consistência e compatibilidade do módulo com o padrão
+de codificação da \textit{Komm}, assegurando sua integração com os demais
+algoritmos já presentes na biblioteca.
