@@ -36,8 +36,8 @@ de sequência a ser codificada em um único passo.
 
 \subsection{Formação dos tokens}
 
-Durante a codificação, o algoritmo busca no \textit{search buffer} o maior
-prefixo ocorra dentro do \textit{lookahead buffer}. O resultado dessa
+Durante a codificação, o algoritmo busca no \textit{search buffer} o maior 
+prefixo, sendo a maior sequecia de caracteres iguais, que ocorra dentro do \textit{lookahead buffer}. O resultado dessa
 busca é codificado como um \textbf{token}
 \(\langle p, \ell, x \rangle\), onde:
 
@@ -106,7 +106,7 @@ pelo algoritmo LZ77.
 
 A sequência a ser codificada é \texttt{"cabracadabrarrarrad"}. Para este exemplo, a janela deslizante possui
 um tamanho total fixo de 13 caracteres, com o \textit{lookahead buffer}
-definido em 6 caracteres. O estado inicial da janela pode ser visto na
+definido em 6 caracteres e search buffer de 7 caracteres. O estado inicial da janela pode ser visto na
 Figura~\ref{fig:Estado_0_LZ77}.
 
 \begin{figure}[htp]
@@ -158,7 +158,7 @@ Para realizar o processo inverso, ou seja, decodificar o token recebido
 $\langle 0, 4, \texttt{r} \rangle$, o decodificador utiliza o mesmo princípio
 do algoritmo LZ77, porém no sentido inverso.
 
-Inicialmente, ele utiliza o offset ($o$) para retornar exatamente 0 posições na
+Inicialmente, ele utiliza o pointer ($p$) para retornar exatamente 0 posições na
 sequência já decodificada até o momento. A partir dessa posição inicial
 encontrada, copia-se uma sequência de comprimento 4 (valor $l$), obtendo o
 trecho \texttt{"abra"}. Em seguida, adiciona-se ao final desta sequência
@@ -195,7 +195,7 @@ bits:
 \end{itemize}
 Dado que na implementação adotada os tamanhos em bits para cada campo do token são
 \[
-  \underbrace{3}_{\substack{\text{bits para}\\\text{pointer }($p$)}} +
+  \underbrace{3}_{\substack{\text{bits para}\\\text{pointer }(p)}} +
   \underbrace{3}_{\substack{\text{bits para}\\\text{length }(\ell)}} +
   \underbrace{8}_{\substack{\text{bits para}\\\text{character }(x)}}
   = 14\;\text{bits},
@@ -210,7 +210,7 @@ bits por símbolo codificado \cite{nelson2008data}.
 Realizando a codificação especificamente para o exemplo dado ($\langle 0, 4,
   \texttt{r} \rangle$), obtêm-se:
 \begin{itemize}
-  \item O valor do \textit{offset} $o = 0$, em $3$ bits é $000_{(2)}$.
+  \item O valor do \textit{pointer} $o = 0$, em $3$ bits é $000_{(2)}$.
   \item O comprimento $l = 4$, em $3$ bits é $100_{(2)}$.
   \item O caractere $r$, em ASCII binário ($8$ bits), é $01110010_{(2)}$.
 \end{itemize}
