@@ -227,25 +227,77 @@ armazenados.
 
 % Revisões Aqui
 \newpage
-\section{Biblioteca Komm}
-A \textit{Komm} é uma biblioteca em \textit{Python} para sistemas de
-comunicação desenvolvida pelo professor Roberto Nobrega. Trata-se de um projeto
-\textit{open-source} para \textit{Python 3} que fornece ferramentas para
-análise e simulação de sistemas de comunicação analógicos e digitais.
+\section{Biblioteca \textit{Komm}}
 
-Este projeto foi inspirado em diversas outras bibliotecas para sistemas de
-comunicação, como \textit{MATLAB\textsuperscript{\textregistered}
-  Communications System Toolbox\texttrademark}, \textit{GNU Radio},
-\textit{CommPy} e \textit{SageMath}.
+A \textit{Komm} é uma biblioteca em \textit{Python} voltada para o estudo e a
+simulação de sistemas de comunicação, desenvolvida pelo professor Roberto
+Nóbrega. Trata-se de um projeto \textit{open-source} compatível com
+\textit{Python~3}, que fornece um conjunto de ferramentas voltadas tanto para
+a análise teórica quanto para a implementação prática de técnicas clássicas e
+modernas de comunicação digital.
 
-Além disso, a biblioteca já disponibiliza diversas codificações implementadas,
-abrangendo diferentes técnicas de \textit{source coding} e \textit{lossless
-  coding}, incluindo:
+A biblioteca adota uma filosofia fortemente inspirada em ferramentas
+acadêmicas e industriais, como o
+\textit{MATLAB\textsuperscript{\textregistered}
+  Communications System Toolbox\texttrademark}, o
+\textit{GNU Radio}, o \textit{CommPy} e o \textit{SageMath}. 
+Contudo, diferencia-se dessas alternativas por priorizar uma abordagem
+didática e modular, em que cada componente do sistema é modelado de forma
+independente e parametrizável. Dessa maneira, a \textit{Komm} se consolida como
+um ambiente unificado para ensino e pesquisa em comunicação, codificação de
+fontes e teoria da informação.
+
+\subsection{Estrutura e organização}
+
+A arquitetura da \textit{Komm} é organizada em módulos temáticos que cobrem
+diferentes aspectos dos sistemas de comunicação, incluindo: modulação,
+codificação de canal, correção de erros, codificação de fonte e geração de
+sinais. Cada módulo é projetado para ser independente, porém interoperável com
+os demais, de modo que o usuário possa compor sistemas completos de
+comunicação digital a partir de blocos básicos.
+
+No contexto deste trabalho, o foco está no módulo de \textbf{codificação sem
+perdas} (\textit{lossless coding}), responsável pela implementação de
+algoritmos de compressão de dados baseados em dicionário e em códigos de
+comprimento variável. Esse módulo disponibiliza atualmente os seguintes
+esquemas de codificação:
+
 \begin{itemize}
-  \item {Shannon Code}
-  \item {Fano Code}
-  \item {Huffman Code}
-  \item {Tunstal lCode}
-  \item {LZ78}
-  \item {LZW}
+  \item \textbf{Shannon Code}: implementação baseada no princípio de
+        entropia mínima para codificação por símbolos individuais;
+  \item \textbf{Fano Code}: variante do método de Shannon–Fano com particionamento
+        recursivo das probabilidades;
+  \item \textbf{Huffman Code}: código ótimo de comprimento variável, usado como
+        referência clássica em compressão sem perdas;
+  \item \textbf{Lempel–Ziv 78 (LZ78)}: algoritmo incremental baseado em
+        dicionário dinâmico;
+  \item \textbf{Lempel–Ziv–Welch (LZW)}: extensão do LZ78 que remove o envio
+        explícito de caracteres literais.
 \end{itemize}
+
+\subsection{Motivação educacional e integração}
+
+A \textit{Komm} foi concebida não apenas como uma biblioteca de software, mas
+também como uma ferramenta de apoio ao ensino e à experimentação. Sua
+estrutura modular permite que estudantes explorem separadamente as etapas de
+codificação, decodificação e análise de desempenho, favorecendo a compreensão
+dos princípios de cada algoritmo.
+
+Cada classe segue um padrão uniforme de interface, documentação e testes,
+permitindo o uso consistente de diferentes algoritmos com a mesma estrutura de
+chamada. Isso viabiliza comparações diretas entre métodos de compressão, tanto
+em termos de eficiência quanto de complexidade computacional, o que é
+particularmente útil em contextos acadêmicos.
+
+\subsection{Relação com este trabalho}
+
+A implementação do algoritmo \textit{Lempel–Ziv 77} (LZ77) desenvolvida neste
+trabalho foi incorporada ao módulo de \textit{lossless coding} da biblioteca
+\textit{Komm}. Essa contribuição amplia o conjunto de técnicas de compressão
+disponíveis, completando a família de algoritmos \textit{Lempel–Ziv}.
+
+Dessa forma, o presente trabalho se insere diretamente no propósito
+pedagógico da \textit{Komm}: disponibilizar implementações abertas, documentadas e
+ consistente em relação aos algoritmos clássicos de codificação de fonte,
+permitindo ao mesmo tempo estudo teórico, análise experimental e integração
+com outros componentes de sistemas de comunicação digital.
