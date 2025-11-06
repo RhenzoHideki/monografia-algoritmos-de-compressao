@@ -24,8 +24,8 @@ Os objetivos deste módulo foram:
           (\texttt{decode}), compatíveis com o padrão interno da \textit{Komm};
     \item expor funções intermediárias para inspeção didática, permitindo a
           visualização dos tokens gerados e dos fluxos de dados nas diferentes etapas;
-    \item validar a corretude do módulo por meio de testes unitários e de
-          \emph{round trip} (\texttt{decode(encode(x)) == x});
+    \item validar a corretude do módulo  por meio de testes unitários e de
+          \emph{round trip} \newline (\texttt{decode(encode(x)) == x});
     \item documentar e integrar o código ao padrão da biblioteca.
 \end{itemize}
 
@@ -84,7 +84,7 @@ acompanhar o comportamento do codificador em cada estágio do processo.
 \subsection{Como foi feito}
 
 A arquitetura do módulo segue o padrão das demais classes de codificação da
-biblioteca. O código foi estruturado em quatro submódulos internos: dois
+biblioteca. A classe foi estruturada em quatro métodos internos: dois
 relacionados à etapa de codificação e dois à etapa de decodificação.
 
 \begin{enumerate}
@@ -109,28 +109,46 @@ descritas na literatura.
 
 \subsection{Processo de busca na codificação (\texttt{source\_to\_tokens})}
 
-O núcleo da codificação LZ77 está no método \texttt{source\_to\_tokens()}, que
-busca, dentro do \textit{search buffer}, o maior trecho que coincida com o
-prefixo do \textit{lookahead buffer}. Nesta implementação, a busca é feita de
-forma simples e eficiente, utilizando o método \texttt{rfind()} da classe
-\texttt{bytes} do Python — o que resulta em código mais limpo e
-desempenho superior sem o uso explícito de tabelas de hash.
+O núcleo da codificação LZ77 está concentrado no método
+\texttt{source\_to\_tokens()}, responsável por identificar, dentro do
+\textit{search buffer}, o maior trecho que coincide com o prefixo do
+\textit{lookahead buffer}. Nesta implementação, a busca é realizada de forma
+simples e eficiente por meio do método \texttt{rfind()} da classe
+\texttt{bytes} do Python, o que resulta em um código conciso e um desempenho
+aceitável, mesmo sem recorrer a estruturas auxiliares complexas, como tabelas
+de dispersão (\textit{hash tables}).
 
 A cada iteração, o algoritmo:
 \begin{enumerate}
-    \item define o \textit{search buffer} como o trecho de tamanho \(S=W-L\);
-    \item tenta localizar a sequência mais longa do \textit{lookahead} dentro do
-    \textit{search buffer};
-    \item emite o token \(\langle p, \ell, x \rangle\), onde \(p\) é o ponteiro
+    \item define o \textit{search buffer} como o trecho de tamanho \(S = W - L\);
+    \item procura, dentro desse trecho, o maior sufixo que coincide com o
+    prefixo atual do \textit{lookahead buffer};
+    \item emite o token \(\langle p, \ell, x \rangle\), em que \(p\) é o ponteiro
     (posição a partir do início da janela), \(\ell\) é o comprimento da
     correspondência e \(x\) é o próximo símbolo literal.
 \end{enumerate}
 
-Essa abordagem segue a convenção do artigo original de Ziv e Lempel, em que o
-ponteiro \(p\) é medido a partir do início da janela, diferindo da convenção
-moderna (offset medido a partir do fim do \textit{search buffer}). A utilização
-do \texttt{rfind()} simplifica a busca, preservando a corretude e a clareza do
-código.
+Essa abordagem segue a convenção original de Ziv e Lempel~\cite{1055714},
+medindo o ponteiro \(p\) a partir do início do \textit{search buffer}, em
+contraste com algumas implementações modernas que utilizam o deslocamento a
+partir do final do buffer. A utilização do \texttt{rfind()} preserva a clareza
+e a corretude do algoritmo, permitindo a reprodução fiel dos resultados
+conceituais do LZ77, conforme apresentado no artigo de 1977.
+
+No entanto, é importante observar que o uso de \texttt{rfind()} representa uma
+busca direta por comparação de cadeias, sem otimizações adicionais de
+indexação. Implementações voltadas a desempenho, como as presentes em
+bibliotecas escritas em C (por exemplo, \textit{FastLZ}), ou abordagens
+discutidas por \textcite{coderspirit2023lz77}, utilizam tabelas de hash para
+armazenar ocorrências de subsequências de comprimento fixo, permitindo localizar
+candidatos de correspondência de forma muito mais rápida. Nesses casos, a busca
+é reduzida a poucas operações de leitura e comparação, ao custo de maior uso de
+memória.
+
+Assim, a implementação proposta na \textit{Komm} prioriza a legibilidade e a
+adesão ao modelo teórico clássico, enquanto reconhece que técnicas como o uso
+de \textit{hash tables} podem ter melhor desempenho sem alterar o comportamento lógico do algoritmo.
+
 
 \subsection{Testes e validação}
 
@@ -147,3 +165,41 @@ verificando:
 Os resultados confirmam a consistência e compatibilidade do módulo com o padrão
 de codificação da \textit{Komm}, assegurando sua integração com os demais
 algoritmos já presentes na biblioteca.
+
+A seguir, apresenta-se um dos testes unitários mais representativos, baseado no
+exemplo do livro de Sayood~\cite{sayood2012introduction}, que verifica a
+correspondência entre a sequência original e o conjunto de tokens gerados:
+
+\begin{lstlisting}[language=Python, caption={Teste unitário baseado no exemplo de Sayood (p. 122).}]
+def test_lz77_sayood():
+    # [Sayood, p. 122]
+    code = komm.LempelZiv77Code(
+        window_size=13,
+        lookahead_size=6,
+        source_cardinality=256,
+        search_buffer=[ord(x) for x in "cabraca"],
+    )
+    source = [ord(x) for x in "dabrarrarrad"]
+    expected = [(1, 0, "d"), (7, 4, "r"), (3, 5, "d")]
+    tokens = []
+    for offset, length, symbol in expected:
+        tokens.append((7 - offset, length, ord(symbol)))
+    np.testing.assert_equal(code.source_to_tokens(source), tokens)
+    np.testing.assert_equal(code.tokens_to_source(tokens), source)
+    np.testing.assert_equal(code.decode(code.encode(source)), source)
+\end{lstlisting}
+
+Esse teste reproduz o exemplo canônico da codificação de
+\texttt{"cabracadabrarrarrad"}, utilizando o mesmo tamanho de janela e
+\textit{lookahead} definidos por Sayood. O teste verifica três propriedades
+centrais do algoritmo:
+\begin{enumerate}
+    \item a geração correta dos tokens \(\langle p, \ell, x \rangle\);
+    \item a reconstrução exata da sequência original a partir dos tokens;
+    \item a preservação da integridade na operação composta
+          \(\texttt{decode(encode(x)) = x}\).
+\end{enumerate}
+
+A validação automática por meio dos testes unitários demonstra que a
+implementação segue fielmente a definição formal do LZ77 e mantém compatibilidade
+total com o padrão de codificação utilizado na \textit{Komm}.
