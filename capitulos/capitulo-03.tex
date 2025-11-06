@@ -189,7 +189,7 @@ def test_lz77_sayood():
     np.testing.assert_equal(code.decode(code.encode(source)), source)
 \end{lstlisting}
 
-Esse teste reproduz o exemplo canônico da codificação de
+Esse teste reproduz o exemplo da codificação de
 \texttt{"cabracadabrarrarrad"}, utilizando o mesmo tamanho de janela e
 \textit{lookahead} definidos por Sayood. O teste verifica três propriedades
 centrais do algoritmo:
