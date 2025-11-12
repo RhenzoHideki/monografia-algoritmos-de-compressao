@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.5.3)  6 NOV 2025 08:07
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.5.3)  12 NOV 2025 11:12
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1383,4 +1383,388 @@ File: brazilian.lbx 2023/03/05 v3.19 biblatex localization (PK/MW)
 )))
 Package biblatex Info: Trying to load language 'brazilian-abnt'...
 Package biblatex Info: ... file 'brazilian-abnt.lbx' found.
- (/usr/share/texlive/texmf-dist/tex
+ (/usr/share/texlive/texmf-dist/tex/latex/biblatex-abnt/brazilian-abnt.lbx
+File: brazilian-abnt.lbx 2018-11-17 v3.4 ABNT BibLaTeX citation style
+Package biblatex Info: Trying to load language 'brazilian' -> 'brazilian-abnt'...
+Package biblatex Info: ... file 'brazilian-abnt.lbx' found.
+ (/usr/share/texlive/texmf-dist/tex/latex/biblatex-abnt/brazilian-abnt.lbx
+File: brazilian-abnt.lbx 2018-11-17 v3.4 ABNT BibLaTeX citation style
+Package biblatex Info: Trying to load language 'brazilian'...
+Package biblatex Info: ... file 'brazilian.lbx' found.
+ (/usr/share/texlive/texmf-dist/tex/latex/biblatex/lbx/brazilian.lbx
+File: brazilian.lbx 2023/03/05 v3.19 biblatex localization (PK/MW)
+)
+Package biblatex Info: Trying to load language 'brazil'...
+Package biblatex Info: ... file 'brazil.lbx' found.
+ (/usr/share/texlive/texmf-dist/tex/latex/biblatex/lbx/brazil.lbx
+File: brazil.lbx 2023/03/05 v3.19 biblatex localization (PK/MW)
+Package biblatex Info: Trying to load language 'brazilian'...
+Package biblatex Info: ... file 'brazilian.lbx' found.
+ (/usr/share/texlive/texmf-dist/tex/latex/biblatex/lbx/brazilian.lbx
+File: brazilian.lbx 2023/03/05 v3.19 biblatex localization (PK/MW)
+)))
+Package biblatex Info: Trying to load language 'brazil'...
+Package biblatex Info: ... file 'brazil.lbx' found.
+ (/usr/share/texlive/texmf-dist/tex/latex/biblatex/lbx/brazil.lbx
+File: brazil.lbx 2023/03/05 v3.19 biblatex localization (PK/MW)
+Package biblatex Info: Trying to load language 'brazilian' -> 'brazilian-abnt'...
+Package biblatex Info: ... file 'brazilian-abnt.lbx' found.
+ (/usr/share/texlive/texmf-dist/tex/latex/biblatex-abnt/brazilian-abnt.lbx
+File: brazilian-abnt.lbx 2018-11-17 v3.4 ABNT BibLaTeX citation style
+Package biblatex Info: Trying to load language 'brazilian'...
+Package biblatex Info: ... file 'brazilian.lbx' found.
+ (/usr/share/texlive/texmf-dist/tex/latex/biblatex/lbx/brazilian.lbx
+File: brazilian.lbx 2023/03/05 v3.19 biblatex localization (PK/MW)
+)
+Package biblatex Info: Trying to load language 'brazil'...
+Package biblatex Info: ... file 'brazil.lbx' found.
+ (/usr/share/texlive/texmf-dist/tex/latex/biblatex/lbx/brazil.lbx
+File: brazil.lbx 2023/03/05 v3.19 biblatex localization (PK/MW)
+Package biblatex Info: Trying to load language 'brazilian'...
+Package biblatex Info: ... file 'brazilian.lbx' found.
+ (/usr/share/texlive/texmf-dist/tex/latex/biblatex/lbx/brazilian.lbx
+File: brazilian.lbx 2023/03/05 v3.19 biblatex localization (PK/MW)
+))))))
+Package biblatex Info: Trying to load language 'english' -> 'english-abnt'...
+Package biblatex Info: ... file 'english-abnt.lbx' found.
+ (/usr/share/texlive/texmf-dist/tex/latex/biblatex-abnt/english-abnt.lbx
+File: english-abnt.lbx 2018-11-17 v3.4 ABNT BibLaTeX citation style
+Package biblatex Info: Trying to load language 'english'...
+Package biblatex Info: ... file 'english.lbx' found.
+ (/usr/share/texlive/texmf-dist/tex/latex/biblatex/lbx/english.lbx
+File: english.lbx 2023/03/05 v3.19 biblatex localization (PK/MW)
+)
+Package biblatex Info: Trying to load language 'english'...
+Package biblatex Info: ... file 'english.lbx' found.
+ (/usr/share/texlive/texmf-dist/tex/latex/biblatex/lbx/english.lbx
+File: english.lbx 2023/03/05 v3.19 biblatex localization (PK/MW)
+)
+Package biblatex Info: Trying to load language 'english'...
+Package biblatex Info: ... file 'english.lbx' found.
+ (/usr/share/texlive/texmf-dist/tex/latex/biblatex/lbx/english.lbx
+File: english.lbx 2023/03/05 v3.19 biblatex localization (PK/MW)
+))
+Package biblatex Info: Input encoding 'utf8' detected.
+Package biblatex Info: Automatic encoding selection.
+(biblatex)             Assuming data encoding 'utf8'.
+\openout4 = `monografia.bcf'.
+
+Package biblatex Info: Trying to load bibliographic data...
+Package biblatex Info: ... file 'monografia.bbl' found.
+ (./monografia.bbl)
+Package biblatex Info: Reference section=0 on input line 39.
+Package biblatex Info: Reference segment=0 on input line 39.
+ (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count550
+\scratchdimen=\dimen325
+\scratchbox=\box74
+\nofMPsegments=\count551
+\nofMParguments=\count552
+\everyMPshowfont=\toks57
+\MPscratchCnt=\count553
+\MPscratchDim=\dimen326
+\MPnumerator=\count554
+\makeMPintoPDFobject=\count555
+\everyMPtoPDFconversion=\toks58
+) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+ (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
+))
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: listings package is loaded.
+Package caption Info: End \AtBeginDocument code.
+\c@lstlisting=\count556
+LaTeX Font Info:    Trying to load font information for T1+lmss on input line 49.
+ (/usr/share/texmf/tex/latex/lm/t1lmss.fd
+File: t1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+) [1
+
+\openout6 = `monografia.ist'.
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}]
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 51.
+ (/usr/share/texmf/tex/latex/lm/ot1lmr.fd
+File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 51.
+ (/usr/share/texmf/tex/latex/lm/omllmm.fd
+File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 51.
+ (/usr/share/texmf/tex/latex/lm/omslmsy.fd
+File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 51.
+ (/usr/share/texmf/tex/latex/lm/omxlmex.fd
+File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <14.4> on input line 51.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 51.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 51.
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.51 
+      [1
+
+
+
+] (./pretextuais/ficha-catalografica.tex) (./pretextuais/folha-de-aprovacao.tex [2
+
+
+]) (./pretextuais/dedicatoria.tex
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <12> on input line 8.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <8> on input line 8.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 8.
+ [3
+
+]) (./pretextuais/agradecimentos.tex [4
+
+
+]) (./pretextuais/epigrafe.tex [5
+
+]) (./pretextuais/resumo-abstract.tex [6
+
+] [7
+
+]) (./monografia.lof
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 6.
+ (/usr/share/texmf/tex/latex/lm/t1lmtt.fd
+File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)) [8
+
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}] (./monografia.loq) [9
+
+] (./monografia.lot) [10
+
+] (./monografia.lol) [11
+
+] (./monografia.acr) (./monografia.sls) (./monografia.toc
+LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <12> not available
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 22.
+LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <12> not available
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 32.
+ [12
+
+
+
+]) [13] (./capitulos/capitulo-01.tex
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 44.
+ (/usr/share/texmf/tex/latex/lm/ts1lmr.fd
+File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+) [14
+
+
+]) (./capitulos/capitulo-02.tex [15{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}] [16
+
+]
+<figuras/DiagramasTCC-LZ77-template.png, id=253, 554.07pt x 188.705pt>
+File: figuras/DiagramasTCC-LZ77-template.png Graphic file (type png)
+<use figuras/DiagramasTCC-LZ77-template.png>
+Package pdftex.def Info: figuras/DiagramasTCC-LZ77-template.png  used on input line 71.
+(pdftex.def)             Requested size: 341.43306pt x 116.28467pt.
+ [17 <./figuras/DiagramasTCC-LZ77-template.png>]
+
+pdfTeX warning: pdflatex (file ./figuras/DiagramasTCC-LZ77-Estado-0.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<figuras/DiagramasTCC-LZ77-Estado-0.pdf, id=271, 545.1567pt x 186.6975pt>
+File: figuras/DiagramasTCC-LZ77-Estado-0.pdf Graphic file (type pdf)
+<use figuras/DiagramasTCC-LZ77-Estado-0.pdf>
+Package pdftex.def Info: figuras/DiagramasTCC-LZ77-Estado-0.pdf  used on input line 116.
+(pdftex.def)             Requested size: 426.79134pt x 146.16757pt.
+
+
+pdfTeX warning: pdflatex (file ./figuras/DiagramasTCC-LZ77-Estado-1.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<figuras/DiagramasTCC-LZ77-Estado-1.pdf, id=277, 545.1567pt x 321.11969pt>
+File: figuras/DiagramasTCC-LZ77-Estado-1.pdf Graphic file (type pdf)
+<use figuras/DiagramasTCC-LZ77-Estado-1.pdf>
+Package pdftex.def Info: figuras/DiagramasTCC-LZ77-Estado-1.pdf  used on input line 137.
+(pdftex.def)             Requested size: 426.79134pt x 251.40822pt.
+[18 <./figuras/DiagramasTCC-LZ77-Estado-0.pdf>]
+<figuras/DiagramasTCC-LZ77-Decoding.png, id=298, 703.62875pt x 925.4575pt>
+File: figuras/DiagramasTCC-LZ77-Decoding.png Graphic file (type png)
+<use figuras/DiagramasTCC-LZ77-Decoding.png>
+Package pdftex.def Info: figuras/DiagramasTCC-LZ77-Decoding.png  used on input line 183.
+(pdftex.def)             Requested size: 341.43306pt x 449.0723pt.
+ [19 <./figuras/DiagramasTCC-LZ77-Estado-1.pdf>] [20 <./figuras/DiagramasTCC-LZ77-Decoding.png>] [21{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}] [22]) (./capitulos/capitulo-03.tex [23]
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 12.
+
+Overfull \hbox (17.96689pt too wide) in paragraph at lines 34--43
+\T1/lmr/m/n/12 en-trada (\T1/lmtt/m/n/12 source_cardinality\T1/lmr/m/n/12 ), a car-di-na-li-dade do al-fa-beto de saída (\T1/lmtt/m/n/12 target_cardinality\T1/lmr/m/n/12 ),
+ []
+
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2023/02/27 1.9 listings language file
+) (/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
+) [24
+
+] [25] [26] [27]) (./capitulos/capitulo-04.tex [28]
+<figuras/smiley-large.png, id=435, 244.915pt x 241.90375pt>
+File: figuras/smiley-large.png Graphic file (type png)
+<use figuras/smiley-large.png>
+Package pdftex.def Info: figuras/smiley-large.png  used on input line 19.
+(pdftex.def)             Requested size: 142.26378pt x 140.51836pt.
+<figuras/snail.png, id=438, 256.96pt x 256.96pt>
+File: figuras/snail.png Graphic file (type png)
+<use figuras/snail.png>
+Package pdftex.def Info: figuras/snail.png  used on input line 27.
+(pdftex.def)             Requested size: 142.26378pt x 142.26552pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[29
+
+ <./figuras/smiley-large.png>]
+Overfull \hbox (36.98337pt too wide) in paragraph at lines 44--45
+[]\T1/lmr/m/n/12 Foram con-si-de-ra-das duas im-ple-men-ta-ções po-pu-la-res: \T1/lmr/bx/n/12 Fas-tLZ[][][][][] \T1/lmr/m/n/12 (C) e \T1/lmr/bx/n/12 LZ77-Compressor[][][][][]
+ []
+
+<figuras/komm_alice_compression.png, id=448, 714.7503pt x 281.853pt>
+File: figuras/komm_alice_compression.png Graphic file (type png)
+<use figuras/komm_alice_compression.png>
+Package pdftex.def Info: figuras/komm_alice_compression.png  used on input line 50.
+(pdftex.def)             Requested size: 426.79134pt x 168.30457pt.
+<figuras/komm_alice_memory.png, id=449, 714.7503pt x 281.853pt>
+File: figuras/komm_alice_memory.png Graphic file (type png)
+<use figuras/komm_alice_memory.png>
+Package pdftex.def Info: figuras/komm_alice_memory.png  used on input line 58.
+(pdftex.def)             Requested size: 426.79134pt x 168.30457pt.
+<figuras/komm_alice_time.png, id=450, 714.7503pt x 281.853pt>
+File: figuras/komm_alice_time.png Graphic file (type png)
+<use figuras/komm_alice_time.png>
+Package pdftex.def Info: figuras/komm_alice_time.png  used on input line 66.
+(pdftex.def)             Requested size: 426.79134pt x 168.30457pt.
+[30 <./figuras/snail.png (PNG copy)>] [31 <./figuras/komm_alice_compression.png> <./figuras/komm_alice_memory.png> <./figuras/komm_alice_time.png>]
+<figuras/komm_smiley_compression.png, id=465, 714.7503pt x 281.853pt>
+File: figuras/komm_smiley_compression.png Graphic file (type png)
+<use figuras/komm_smiley_compression.png>
+Package pdftex.def Info: figuras/komm_smiley_compression.png  used on input line 81.
+(pdftex.def)             Requested size: 426.79134pt x 168.30457pt.
+<figuras/komm_smiley_memory.png, id=466, 714.7503pt x 281.853pt>
+File: figuras/komm_smiley_memory.png Graphic file (type png)
+<use figuras/komm_smiley_memory.png>
+Package pdftex.def Info: figuras/komm_smiley_memory.png  used on input line 89.
+(pdftex.def)             Requested size: 426.79134pt x 168.30457pt.
+<figuras/komm_smiley_time.png, id=467, 714.7503pt x 281.853pt>
+File: figuras/komm_smiley_time.png Graphic file (type png)
+<use figuras/komm_smiley_time.png>
+Package pdftex.def Info: figuras/komm_smiley_time.png  used on input line 97.
+(pdftex.def)             Requested size: 426.79134pt x 168.30457pt.
+<figuras/komm_snail_compression.png, id=468, 714.7503pt x 281.853pt>
+File: figuras/komm_snail_compression.png Graphic file (type png)
+<use figuras/komm_snail_compression.png>
+Package pdftex.def Info: figuras/komm_snail_compression.png  used on input line 105.
+(pdftex.def)             Requested size: 426.79134pt x 168.30457pt.
+<figuras/komm_snail_memory.png, id=469, 714.7503pt x 281.853pt>
+File: figuras/komm_snail_memory.png Graphic file (type png)
+<use figuras/komm_snail_memory.png>
+Package pdftex.def Info: figuras/komm_snail_memory.png  used on input line 113.
+(pdftex.def)             Requested size: 426.79134pt x 168.30457pt.
+<figuras/komm_snail_time.png, id=470, 714.7503pt x 281.853pt>
+File: figuras/komm_snail_time.png Graphic file (type png)
+<use figuras/komm_snail_time.png>
+Package pdftex.def Info: figuras/komm_snail_time.png  used on input line 121.
+(pdftex.def)             Requested size: 426.79134pt x 168.30457pt.
+ [32 <./figuras/komm_smiley_compression.png> <./figuras/komm_smiley_memory.png>] [33 <./figuras/komm_smiley_time.png> <./figuras/komm_snail_compression.png> <./figuras/komm_snail_memory.png>]
+<figuras/lz77_alice_compression_window.png, id=488, 642.4803pt x 353.4003pt>
+File: figuras/lz77_alice_compression_window.png Graphic file (type png)
+<use figuras/lz77_alice_compression_window.png>
+Package pdftex.def Info: figuras/lz77_alice_compression_window.png  used on input line 168.
+(pdftex.def)             Requested size: 426.79134pt x 234.76018pt.
+ [34 <./figuras/komm_snail_time.png>]
+<figuras/lz77_alice_memory_window.png, id=496, 642.4803pt x 354.123pt>
+File: figuras/lz77_alice_memory_window.png Graphic file (type png)
+<use figuras/lz77_alice_memory_window.png>
+Package pdftex.def Info: figuras/lz77_alice_memory_window.png  used on input line 176.
+(pdftex.def)             Requested size: 426.79134pt x 235.24026pt.
+<figuras/lz77_alice_time_window.png, id=497, 642.4803pt x 353.4003pt>
+File: figuras/lz77_alice_time_window.png Graphic file (type png)
+<use figuras/lz77_alice_time_window.png>
+Package pdftex.def Info: figuras/lz77_alice_time_window.png  used on input line 184.
+(pdftex.def)             Requested size: 426.79134pt x 234.76018pt.
+ [35 <./figuras/lz77_alice_compression_window.png> <./figuras/lz77_alice_memory_window.png>]
+<figuras/lz77_smiley_compression_window.png, id=504, 642.4803pt x 353.4003pt>
+File: figuras/lz77_smiley_compression_window.png Graphic file (type png)
+<use figuras/lz77_smiley_compression_window.png>
+Package pdftex.def Info: figuras/lz77_smiley_compression_window.png  used on input line 199.
+(pdftex.def)             Requested size: 426.79134pt x 234.76018pt.
+<figuras/lz77_smiley_memory_window.png, id=505, 642.4803pt x 354.123pt>
+File: figuras/lz77_smiley_memory_window.png Graphic file (type png)
+<use figuras/lz77_smiley_memory_window.png>
+Package pdftex.def Info: figuras/lz77_smiley_memory_window.png  used on input line 207.
+(pdftex.def)             Requested size: 426.79134pt x 235.24026pt.
+<figuras/lz77_smiley_time_window.png, id=506, 643.203pt x 353.4003pt>
+File: figuras/lz77_smiley_time_window.png Graphic file (type png)
+<use figuras/lz77_smiley_time_window.png>
+Package pdftex.def Info: figuras/lz77_smiley_time_window.png  used on input line 215.
+(pdftex.def)             Requested size: 426.79134pt x 234.49594pt.
+ [36 <./figuras/lz77_alice_time_window.png> <./figuras/lz77_smiley_compression_window.png>] [37 <./figuras/lz77_smiley_memory_window.png> <./figuras/lz77_smiley_time_window.png>] [38]) (./capitulos/capitulo-05.tex [39] [40
+
+]) [41]
+Overfull \hbox (25.1742pt too wide) in paragraph at lines 116--116
+[][]\T1/lmr/m/n/12 NELSON, M. \T1/lmr/bx/n/12 The Data Com-pres-sion Book\T1/lmr/m/n/12 . BPB Pu-bli-ca-ti-ons, 2008. ISBN 9788170297291.
+ []
+
+(./anexos-apendices/apendices.tex [42
+
+]) (./anexos-apendices/anexos.tex [43
+
+] [44
+
+]) [45
+
+]
+\tf@lof=\write9
+\openout9 = `monografia.lof'.
+
+\tf@loq=\write10
+\openout10 = `monografia.loq'.
+
+\tf@lot=\write11
+\openout11 = `monografia.lot'.
+
+\tf@lol=\write12
+\openout12 = `monografia.lol'.
+
+\tf@toc=\write13
+\openout13 = `monografia.toc'.
+
+ 
+enddocument/afterlastpage: lastpage setting LastPage.
+(./monografia.aux)
+ ***********
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2020/03/25>
+ ***********
+Package logreq Info: Writing requests to 'monografia.run.xml'.
+\openout1 = `monografia.run.xml'.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 47504 strings out of 474222
+ 894397 string characters out of 5748734
+ 2109975 words of memory out of 5000000
+ 68779 multiletter control sequences out of 15000+600000
+ 637551 words of font info for 84 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 124i,12n,121p,2438b,4454s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmbxi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi12.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr7.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmri12.pfb></usr/share/texmf/fonts/type1/public/lm/lmri8.pfb></usr/share/texmf/fonts/type1/public/lm/lmss10.pfb></usr/share/texmf/fonts/type1/public/lm/lmss12.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsso12.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtk10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt12.pfb>
+Output written on monografia.pdf (46 pages, 984610 bytes).
+PDF statistics:
+ 851 PDF objects out of 1000 (max. 8388607)
+ 701 compressed objects within 8 object streams
+ 198 named destinations out of 1000 (max. 500000)
+ 486 words of extra memory for PDF output out of 10000 (max. 10000000)
+

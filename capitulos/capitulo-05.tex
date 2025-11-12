@@ -1,0 +1,52 @@
+\chapter{Conclusão e Trabalhos Futuros}\label{cap:conclusao}
+
+Este trabalho teve como objetivo implementar o algoritmo de compressão sem perdas
+\textit{Lempel–Ziv 77} (LZ77) na biblioteca \textit{Komm}, integrando-o ao conjunto de
+códigos-fonte abertos já disponíveis para o estudo de sistemas de comunicação digitais.
+A implementação buscou seguir fielmente o modelo descrito no artigo original de
+Ziv e Lempel~\cite{1055714}, priorizando clareza didática, compatibilidade com a
+infraestrutura existente da biblioteca e modularidade para futuras extensões.
+
+O desenvolvimento foi dividido em quatro módulos internos de codificação e decodificação,
+permitindo a inspeção direta dos tokens gerados e das etapas intermediárias do processo.
+Essa abordagem reforçou o caráter educacional da biblioteca, facilitando a visualização
+do funcionamento interno do LZ77 e a comparação com outros algoritmos já implementados,
+como Huffman, LZW e LZ78.
+
+Os resultados experimentais confirmaram o comportamento clássico do LZ77:
+aumentos no tamanho da janela deslizante (\(W\)) proporcionaram melhor taxa de compressão,
+mas com crescimento proporcional do tempo de execução e do consumo de memória.
+A comparação com implementações externas, em especial o \textit{FastLZ} em C,
+demonstrou que o desempenho inferior da versão em Python deve-se principalmente
+à ausência de estruturas de indexação otimizadas (como tabelas de hash) e ao
+modelo de tokens de tamanho fixo, que privilegia a simplicidade conceitual
+em detrimento da eficiência máxima.
+
+Apesar dessas limitações, a integração do LZ77 à \textit{Komm} mostrou-se bem-sucedida:
+todas as simulações preservaram a integridade dos dados, e a estrutura modular
+proposta oferece uma base sólida para pesquisa, ensino e experimentação de novos
+métodos de compressão.
+
+\section{Trabalhos Futuros}
+
+Como desdobramento natural deste projeto, destacam-se as seguintes possibilidades
+de evolução:
+
+\begin{itemize}
+  \item \textbf{Implementação da Codificação Aritmética:} continuação da proposta
+  original, incorporando o algoritmo de codificação aritmética à \textit{Komm},
+  o que permitirá avaliar esquemas híbridos e comparações diretas com Huffman
+  e Tunstall em termos de entropia e eficiência.
+
+  \item \textbf{Otimização do LZ77 com Tabelas de Hash:}
+  desenvolver uma versão alternativa do \textit{LempelZiv77Code}
+  que utilize uma tabela de dispersão (\textit{hash table}) para acelerar
+  a busca de correspondências, aproximando-se do desempenho de implementações
+  como o \textit{FastLZ}, sem perder a clareza e a compatibilidade do modelo atual.
+
+  \item \textbf{Análise de Compressão Mista:}
+  investigar combinações entre LZ77 e codificações de entropia (Huffman ou Aritmética),
+  como ocorre no formato \textit{DEFLATE}, avaliando o impacto na taxa e no tempo
+  de compressão.
+
+\end{itemize}

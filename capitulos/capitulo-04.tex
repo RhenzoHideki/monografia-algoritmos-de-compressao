@@ -232,3 +232,24 @@ Os resultados obtidos confirmam o comportamento clássico do \textit{LZ77}:
 
 Apesar disso, a versão implementada na \textit{Komm} mostrou-se competitiva, validando a adequação da arquitetura modular proposta e seu potencial como ferramenta educacional e de pesquisa.  
 Todos os testes preservaram a integridade dos dados (\emph{round trip} verdadeiro).
+
+\subsection{Diferenças entre as implementações em C e Python}
+
+Embora os experimentos tenham utilizado parâmetros equivalentes (\(W = 8~\text{kB}\), \(L = 264~\text{bytes}\)), a implementação em C (\textit{FastLZ}) apresentou melhor taxa de compressão e tempo de execução significativamente menor.  
+Essa diferença é explicada não apenas pela eficiência da linguagem compilada, mas também por decisões de projeto distintas em cada implementação.
+
+A versão da \textit{Komm}, escrita em Python, segue fielmente o modelo teórico original de Lempel e Ziv~\cite{1055714}, utilizando tokens de formato fixo \(\langle p, \ell, x \rangle\) e o método \texttt{rfind()} para localizar correspondências no \textit{search buffer}.  
+Esse método, embora eficiente por ser implementado em C dentro do interpretador Python, realiza uma busca sequencial de sufixos, sem o uso de estruturas auxiliares como tabelas de dispersão (\textit{hash tables}).  
+Tal escolha privilegia a clareza e a correção do algoritmo, mas implica maior custo computacional e overhead de representação.
+
+Por outro lado, o \textit{FastLZ} foi concebido com foco em desempenho: implementa um mecanismo de busca baseado em \textit{hash tables} para localizar rapidamente possíveis correspondências de três bytes, e emprega uma codificação de comprimento variável, reduzindo o tamanho dos metadados armazenados.  
+Além disso, o código em C acessa diretamente buffers de memória contígua (\texttt{uint8\_t}) e evita alocações dinâmicas, o que reduz o tempo de execução em ordens de magnitude.
+
+Em síntese, a diferença observada decorre de dois fatores principais:
+\begin{enumerate}
+  \item \textbf{Modelo de codificação:} a versão da \textit{Komm} utiliza tokens de tamanho fixo e separação explícita dos campos \(p\), \(\ell\) e \(x\), enquanto o \textit{FastLZ} emprega um formato variável, agrupando literais e matches em blocos compactos.
+  \item \textbf{Estratégia de busca:} o uso de \texttt{rfind()} em Python realiza comparações diretas de cadeias, enquanto o \textit{FastLZ} utiliza índices hash para reduzir o número de comparações.
+\end{enumerate}
+
+Essas diferenças justificam tanto a melhor taxa de compressão do \textit{FastLZ} (55\% no texto e 19\% na imagem \textit{snail}) quanto seu tempo de execução reduzido (milissegundos contra dezenas de segundos na versão em Python).  
+Contudo, a implementação na \textit{Komm} apresenta maior transparência conceitual e modularidade, sendo mais adequada para ensino, extensão e análise experimental do algoritmo.
