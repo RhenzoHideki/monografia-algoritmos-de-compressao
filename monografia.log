@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.5.3)  12 NOV 2025 11:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.5.3)  14 NOV 2025 08:20
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1593,7 +1593,7 @@ Package pdftex.def Info: figuras/DiagramasTCC-LZ77-Estado-1.pdf  used on input l
 <figuras/DiagramasTCC-LZ77-Decoding.png, id=298, 703.62875pt x 925.4575pt>
 File: figuras/DiagramasTCC-LZ77-Decoding.png Graphic file (type png)
 <use figuras/DiagramasTCC-LZ77-Decoding.png>
-Package pdftex.def Info: figuras/DiagramasTCC-LZ77-Decoding.png  used on input line 183.
+Package pdftex.def Info: figuras/DiagramasTCC-LZ77-Decoding.png  used on input line 184.
 (pdftex.def)             Requested size: 341.43306pt x 449.0723pt.
  [19 <./figuras/DiagramasTCC-LZ77-Estado-1.pdf>] [20 <./figuras/DiagramasTCC-LZ77-Decoding.png>] [21{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}] [22]) (./capitulos/capitulo-03.tex [23]
 LaTeX Font Info:    External font `lmex10' loaded for size
@@ -1613,12 +1613,12 @@ File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
 <figuras/smiley-large.png, id=435, 244.915pt x 241.90375pt>
 File: figuras/smiley-large.png Graphic file (type png)
 <use figuras/smiley-large.png>
-Package pdftex.def Info: figuras/smiley-large.png  used on input line 19.
+Package pdftex.def Info: figuras/smiley-large.png  used on input line 31.
 (pdftex.def)             Requested size: 142.26378pt x 140.51836pt.
 <figuras/snail.png, id=438, 256.96pt x 256.96pt>
 File: figuras/snail.png Graphic file (type png)
 <use figuras/snail.png>
-Package pdftex.def Info: figuras/snail.png  used on input line 27.
+Package pdftex.def Info: figuras/snail.png  used on input line 39.
 (pdftex.def)             Requested size: 142.26378pt x 142.26552pt.
 
 
@@ -1627,90 +1627,85 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 [29
 
  <./figuras/smiley-large.png>]
-Overfull \hbox (36.98337pt too wide) in paragraph at lines 44--45
-[]\T1/lmr/m/n/12 Foram con-si-de-ra-das duas im-ple-men-ta-ções po-pu-la-res: \T1/lmr/bx/n/12 Fas-tLZ[][][][][] \T1/lmr/m/n/12 (C) e \T1/lmr/bx/n/12 LZ77-Compressor[][][][][]
- []
-
 <figuras/komm_alice_compression.png, id=448, 714.7503pt x 281.853pt>
 File: figuras/komm_alice_compression.png Graphic file (type png)
 <use figuras/komm_alice_compression.png>
-Package pdftex.def Info: figuras/komm_alice_compression.png  used on input line 50.
+Package pdftex.def Info: figuras/komm_alice_compression.png  used on input line 74.
 (pdftex.def)             Requested size: 426.79134pt x 168.30457pt.
 <figuras/komm_alice_memory.png, id=449, 714.7503pt x 281.853pt>
 File: figuras/komm_alice_memory.png Graphic file (type png)
 <use figuras/komm_alice_memory.png>
-Package pdftex.def Info: figuras/komm_alice_memory.png  used on input line 58.
+Package pdftex.def Info: figuras/komm_alice_memory.png  used on input line 82.
 (pdftex.def)             Requested size: 426.79134pt x 168.30457pt.
 <figuras/komm_alice_time.png, id=450, 714.7503pt x 281.853pt>
 File: figuras/komm_alice_time.png Graphic file (type png)
 <use figuras/komm_alice_time.png>
-Package pdftex.def Info: figuras/komm_alice_time.png  used on input line 66.
+Package pdftex.def Info: figuras/komm_alice_time.png  used on input line 90.
 (pdftex.def)             Requested size: 426.79134pt x 168.30457pt.
-[30 <./figuras/snail.png (PNG copy)>] [31 <./figuras/komm_alice_compression.png> <./figuras/komm_alice_memory.png> <./figuras/komm_alice_time.png>]
+ [30 <./figuras/snail.png (PNG copy)>] [31 <./figuras/komm_alice_compression.png> <./figuras/komm_alice_memory.png> <./figuras/komm_alice_time.png>]
 <figuras/komm_smiley_compression.png, id=465, 714.7503pt x 281.853pt>
 File: figuras/komm_smiley_compression.png Graphic file (type png)
 <use figuras/komm_smiley_compression.png>
-Package pdftex.def Info: figuras/komm_smiley_compression.png  used on input line 81.
+Package pdftex.def Info: figuras/komm_smiley_compression.png  used on input line 108.
 (pdftex.def)             Requested size: 426.79134pt x 168.30457pt.
 <figuras/komm_smiley_memory.png, id=466, 714.7503pt x 281.853pt>
 File: figuras/komm_smiley_memory.png Graphic file (type png)
 <use figuras/komm_smiley_memory.png>
-Package pdftex.def Info: figuras/komm_smiley_memory.png  used on input line 89.
+Package pdftex.def Info: figuras/komm_smiley_memory.png  used on input line 116.
 (pdftex.def)             Requested size: 426.79134pt x 168.30457pt.
 <figuras/komm_smiley_time.png, id=467, 714.7503pt x 281.853pt>
 File: figuras/komm_smiley_time.png Graphic file (type png)
 <use figuras/komm_smiley_time.png>
-Package pdftex.def Info: figuras/komm_smiley_time.png  used on input line 97.
+Package pdftex.def Info: figuras/komm_smiley_time.png  used on input line 124.
 (pdftex.def)             Requested size: 426.79134pt x 168.30457pt.
 <figuras/komm_snail_compression.png, id=468, 714.7503pt x 281.853pt>
 File: figuras/komm_snail_compression.png Graphic file (type png)
 <use figuras/komm_snail_compression.png>
-Package pdftex.def Info: figuras/komm_snail_compression.png  used on input line 105.
+Package pdftex.def Info: figuras/komm_snail_compression.png  used on input line 132.
 (pdftex.def)             Requested size: 426.79134pt x 168.30457pt.
 <figuras/komm_snail_memory.png, id=469, 714.7503pt x 281.853pt>
 File: figuras/komm_snail_memory.png Graphic file (type png)
 <use figuras/komm_snail_memory.png>
-Package pdftex.def Info: figuras/komm_snail_memory.png  used on input line 113.
+Package pdftex.def Info: figuras/komm_snail_memory.png  used on input line 140.
 (pdftex.def)             Requested size: 426.79134pt x 168.30457pt.
 <figuras/komm_snail_time.png, id=470, 714.7503pt x 281.853pt>
 File: figuras/komm_snail_time.png Graphic file (type png)
 <use figuras/komm_snail_time.png>
-Package pdftex.def Info: figuras/komm_snail_time.png  used on input line 121.
+Package pdftex.def Info: figuras/komm_snail_time.png  used on input line 148.
 (pdftex.def)             Requested size: 426.79134pt x 168.30457pt.
- [32 <./figuras/komm_smiley_compression.png> <./figuras/komm_smiley_memory.png>] [33 <./figuras/komm_smiley_time.png> <./figuras/komm_snail_compression.png> <./figuras/komm_snail_memory.png>]
-<figuras/lz77_alice_compression_window.png, id=488, 642.4803pt x 353.4003pt>
+ [32 <./figuras/komm_smiley_compression.png> <./figuras/komm_smiley_memory.png>] [33 <./figuras/komm_smiley_time.png> <./figuras/komm_snail_compression.png> <./figuras/komm_snail_memory.png>] [34 <./figuras/komm_snail_time.png>]
+<figuras/lz77_alice_compression_window.png, id=495, 642.4803pt x 353.4003pt>
 File: figuras/lz77_alice_compression_window.png Graphic file (type png)
 <use figuras/lz77_alice_compression_window.png>
-Package pdftex.def Info: figuras/lz77_alice_compression_window.png  used on input line 168.
+Package pdftex.def Info: figuras/lz77_alice_compression_window.png  used on input line 203.
 (pdftex.def)             Requested size: 426.79134pt x 234.76018pt.
- [34 <./figuras/komm_snail_time.png>]
 <figuras/lz77_alice_memory_window.png, id=496, 642.4803pt x 354.123pt>
 File: figuras/lz77_alice_memory_window.png Graphic file (type png)
 <use figuras/lz77_alice_memory_window.png>
-Package pdftex.def Info: figuras/lz77_alice_memory_window.png  used on input line 176.
+Package pdftex.def Info: figuras/lz77_alice_memory_window.png  used on input line 211.
 (pdftex.def)             Requested size: 426.79134pt x 235.24026pt.
 <figuras/lz77_alice_time_window.png, id=497, 642.4803pt x 353.4003pt>
 File: figuras/lz77_alice_time_window.png Graphic file (type png)
 <use figuras/lz77_alice_time_window.png>
-Package pdftex.def Info: figuras/lz77_alice_time_window.png  used on input line 184.
+Package pdftex.def Info: figuras/lz77_alice_time_window.png  used on input line 219.
 (pdftex.def)             Requested size: 426.79134pt x 234.76018pt.
  [35 <./figuras/lz77_alice_compression_window.png> <./figuras/lz77_alice_memory_window.png>]
 <figuras/lz77_smiley_compression_window.png, id=504, 642.4803pt x 353.4003pt>
 File: figuras/lz77_smiley_compression_window.png Graphic file (type png)
 <use figuras/lz77_smiley_compression_window.png>
-Package pdftex.def Info: figuras/lz77_smiley_compression_window.png  used on input line 199.
+Package pdftex.def Info: figuras/lz77_smiley_compression_window.png  used on input line 237.
 (pdftex.def)             Requested size: 426.79134pt x 234.76018pt.
 <figuras/lz77_smiley_memory_window.png, id=505, 642.4803pt x 354.123pt>
 File: figuras/lz77_smiley_memory_window.png Graphic file (type png)
 <use figuras/lz77_smiley_memory_window.png>
-Package pdftex.def Info: figuras/lz77_smiley_memory_window.png  used on input line 207.
+Package pdftex.def Info: figuras/lz77_smiley_memory_window.png  used on input line 245.
 (pdftex.def)             Requested size: 426.79134pt x 235.24026pt.
 <figuras/lz77_smiley_time_window.png, id=506, 643.203pt x 353.4003pt>
 File: figuras/lz77_smiley_time_window.png Graphic file (type png)
 <use figuras/lz77_smiley_time_window.png>
-Package pdftex.def Info: figuras/lz77_smiley_time_window.png  used on input line 215.
+Package pdftex.def Info: figuras/lz77_smiley_time_window.png  used on input line 253.
 (pdftex.def)             Requested size: 426.79134pt x 234.49594pt.
- [36 <./figuras/lz77_alice_time_window.png> <./figuras/lz77_smiley_compression_window.png>] [37 <./figuras/lz77_smiley_memory_window.png> <./figuras/lz77_smiley_time_window.png>] [38]) (./capitulos/capitulo-05.tex [39] [40
+ [36 <./figuras/lz77_alice_time_window.png>] [37 <./figuras/lz77_smiley_compression_window.png> <./figuras/lz77_smiley_memory_window.png>] [38 <./figuras/lz77_smiley_time_window.png>]) (./capitulos/capitulo-05.tex [39] [40
 
 ]) [41]
 Overfull \hbox (25.1742pt too wide) in paragraph at lines 116--116
@@ -1761,7 +1756,7 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  124i,12n,121p,2438b,4454s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmbxi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi12.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr7.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmri12.pfb></usr/share/texmf/fonts/type1/public/lm/lmri8.pfb></usr/share/texmf/fonts/type1/public/lm/lmss10.pfb></usr/share/texmf/fonts/type1/public/lm/lmss12.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsso12.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtk10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt12.pfb>
-Output written on monografia.pdf (46 pages, 984433 bytes).
+Output written on monografia.pdf (46 pages, 983888 bytes).
 PDF statistics:
  851 PDF objects out of 1000 (max. 8388607)
  701 compressed objects within 8 object streams

@@ -158,7 +158,8 @@ Para realizar o processo inverso, ou seja, decodificar o token recebido
 $\langle 0, 4, \texttt{r} \rangle$, o decodificador utiliza o mesmo princípio
 do algoritmo LZ77, porém no sentido inverso.
 
-Inicialmente, ele utiliza o pointer ($p$) para recontruir, neste caso $0$ posições
+Inicialmente, ele utiliza o pointer ($p$) para recontruir,neste caso na posição 0 do
+\textit{search buffer}
 , a sequência já decodificada até o momento. A partir dessa posição inicial
 encontrada, copia-se uma sequência de comprimento 4 (valor $l$), obtendo o
 trecho \texttt{"abra"}. Em seguida, adiciona-se ao final desta sequência
