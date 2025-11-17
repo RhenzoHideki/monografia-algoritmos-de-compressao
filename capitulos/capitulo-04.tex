@@ -332,7 +332,10 @@ já não é capaz de codificar corretamente:
 \begin{lstlisting}[language=Python, caption={Segundo exemplo do lz77enco do Octave.}]
 lz77enco ([0 0 1 0 1 0 2 1 0 2 1 0 2 1 2 0 2 1 0 2 1 2 0 0 1], 3, 9, 18)
 
-# syntax error
+error: =: nonconformant arguments (op1 is 9x1, op2 is 1x11)
+error: called from
+    lz77enco at line 61 column 7
+
 \end{lstlisting}
 Esse comportamento indica que a função \texttt{lz77enco} do Octave possui
 limitações significativas em sua implementação, não sendo capaz de lidar com
