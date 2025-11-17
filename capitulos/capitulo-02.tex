@@ -130,7 +130,7 @@ Após esta codificação inicial, a janela deslizante avança uma posição, o q
 altera o conteúdo tanto do \textit{search buffer} quanto do \textit{lookahead
   buffer}, conforme mostrado na Figura~\ref{fig:Estado_1_LZ77}.
 
-\begin{figure}[htp]
+\begin{figure}[ht]
   \centering
   \caption{Estado da janela após primeira codificação no algoritmo LZ77}
   \label{fig:Estado_1_LZ77}
@@ -153,6 +153,24 @@ correspondência encontrada (\texttt{"abra"}), e \texttt{"r"} é o caractere
 seguinte imediatamente após essa sequência, ainda não codificado. Após isso, a
 janela avança em 5~posições (4~caracteres da sequência codificada mais
 1~caractere literal).
+
+
+
+\begin{figure}[htp]
+  \centering
+  \caption{Estado da janela após primeira codificação no algoritmo LZ77}
+  \label{fig:Estado_2_LZ77}
+  \includegraphics[width=15cm]{figuras/DiagramasTCC-LZ77-Estado-2 (1).pdf}
+  \fonte{Adaptada de \textcite{sayood2012introduction}}
+\end{figure}
+
+Após a segunda codificação, a janela deslizante avança novamente, e o
+processo se repete. Procura-se no \textit{search buffer} a maior correspondência para o início do
+\textit{lookahead buffer}, que agora começa com \texttt{"rar"}. Neste caso, a
+o deslocamento até a correspondência mais longa é 4, com comprimento 3
+(\texttt{"rar"}), seguido do caractere literal \texttt{"r"}. Assim, o token
+gerado é $\langle 4, 3, \texttt{r} \rangle$, este processo pode ser observado na
+Figura~\ref{fig:Estado_2_LZ77}.
 
 Para realizar o processo inverso, ou seja, decodificar o token recebido
 $\langle 0, 4, \texttt{r} \rangle$, o decodificador utiliza o mesmo princípio

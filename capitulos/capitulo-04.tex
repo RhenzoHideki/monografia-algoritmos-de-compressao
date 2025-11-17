@@ -7,7 +7,7 @@ algoritmos disponíveis na \textit{Komm} (Huffman, Shannon--Fano, LZ78 e LZW)
 foram utilizados apenas como referência para fins de contextualização dos
 resultados.
 
-\section{Conjuntos de dados e protocolo experimental}
+\section{Conjuntos de dados}
 
 Foram utilizados dois tipos de arquivos: (i) \textbf{textos} e (ii)
 \textbf{imagens}. O texto escolhido foi o livro \textit{Alice’s Adventures in
@@ -54,18 +54,12 @@ algoritmos:
 
 \section{Resultados do LZ77 na \textit{Komm}}
 
-Foram consideradas duas implementações populares:
-\begin{itemize}
-  \item \textbf{FastLZ}\footnote{https://github.com/ariya/FastLZ} (C)
-  \item \textbf{LZ77-Compressor}\footnote{https://github.com/ariya/FastLZ} (Python)
-\end{itemize}
-
-As configurações efetivas foram: \(W=8\,\text{KiB}\) e \(L=264\) bytes no
-\textit{FastLZ}; no \textit{LZ77-Compressor}, \(W\) variou entre 100 e 400
-bytes e \(L=15\) bytes. Na \textit{Komm}, \(W\) e \(L\) são parametrizáveis;
-para comparação, utilizaram-se configurações próximas às disponíveis nas
-bibliotecas externas quando pertinente, além de uma configuração de referência
-com \(W=64\,\text{kB}\).
+%TODO: Faltando textos de análise
+Para avaliar o desempenho do \textit{LZ77} na \textit{Komm}, foram realizados
+testes variando o tamanho da janela \(W\) entre 100~bytes e 64~kB, mantendo o
+tamanho do \textit{lookahead} \(L\) fixo em 16~bytes. Os resultados foram
+comparados com os algoritmos de compressão Huffman, Shannon--Fano, LZ78 e LZW
+disponíveis na biblioteca.
 
 \begin{figure}[htp]
   \centering
@@ -181,6 +175,7 @@ com \(W=64\,\text{kB}\).
   \fonte{Elaborada pelo autor.}
 \end{quadro}
 
+\newpage
 \section{Comparação com implementações externas de LZ77}\label{sec:externas}
 
 Foram consideradas duas implementações populares do algoritmo \textit{LZ77}:
@@ -312,3 +307,35 @@ tempo de execução reduzido (milissegundos contra dezenas de segundos na versã
 em Python). Contudo, a implementação na \textit{Komm} apresenta maior
 transparência conceitual e modularidade, sendo mais adequada para ensino,
 extensão e análise experimental do algoritmo.
+
+
+\newpage
+\subsection{Limitações da função \texttt{lz77enco} do Octave}
+Além das implementações externas em C e Python, também foi avaliado uma
+implementação didática do algoritmo \textit{LZ77} no GNU Octave. Porém essa função apresentou problemas significativos
+em relação ao seu uso prático, conforme detalhado a seguir.
+
+\begin{lstlisting}[language=Python, caption={Exemplo do lz77enco do Octave.}]
+lz77enco ([0 0 1 0 1 0 2 1 0 2 1 0 2 1 2 0 2 1 0 2 1 2 0 0], 3, 9, 18)
+
+ans =
+   8   2   1
+   7   3   2
+   6   7   2
+   2   8   0
+\end{lstlisting}
+Seguindo a documentação da função \texttt{lz77enco}, o comando funciona como esperado, e também fazendo a comparação com a implementação da \textit{Komm}, observa-se que o
+resultado gerado pelo \texttt{lz77enco} do Octave correponde com as expectativas.
+Porém, ao tentar codificar uma sequência com um elemento adicional no sequencia, a biblioteca do Octave
+já não é capaz de codificar corretamente:
+
+\begin{lstlisting}[language=Python, caption={Segundo exemplo do lz77enco do Octave.}]
+lz77enco ([0 0 1 0 1 0 2 1 0 2 1 0 2 1 2 0 2 1 0 2 1 2 0 0 1], 3, 9, 18)
+
+# syntax error
+\end{lstlisting}
+Esse comportamento indica que a função \texttt{lz77enco} do Octave possui
+limitações significativas em sua implementação, não sendo capaz de lidar com
+casos simples de entrada. Dessa forma, sua utilização em experimentos práticos
+fica comprometida, reforçando a necessidade de implementações mais robustas e
+flexíveis, como a desenvolvida na \textit{Komm}.
