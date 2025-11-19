@@ -1,4 +1,4 @@
-\chapter{Resultados}\label{cap:Resultados}
+\chapter{Resultados}\label{cap:resultados}
 
 Este capítulo apresenta os experimentos realizados com a implementação do
 algoritmo \textit{LZ77} desenvolvida na biblioteca \textit{Komm}, bem como
@@ -29,7 +29,7 @@ Figura~\ref{fig:snail} a imagem \textit{snail} (196.666~bytes).
   \caption{Imagem bitmap (BMP) \textit{smiley}.}
   \label{fig:smiley}
   \includegraphics[width=5cm]{figuras/smiley-large.png}
-  \fonte{Adaptada de \url{https://cse1.net/recaps/graphics}.}
+  \fonte{\url{https://cse1.net/recaps/graphics}.}
 \end{figure}
 
 \begin{figure}[h]
@@ -37,7 +37,7 @@ Figura~\ref{fig:snail} a imagem \textit{snail} (196.666~bytes).
   \caption{Imagem bitmap (BMP) \textit{snail}.}
   \label{fig:snail}
   \includegraphics[width=5cm]{figuras/snail.png}
-  \fonte{Adaptada de \url{https://people.math.sc.edu/Burkardt/data/bmp/bmp.html}.}
+  \fonte{\url{https://people.math.sc.edu/Burkardt/data/bmp/bmp.html}.}
 \end{figure}
 
 \pagebreak
@@ -63,7 +63,7 @@ disponíveis na biblioteca.
 
 \begin{figure}[htp]
   \centering
-  \caption{Texto \textit{Alice}: taxa de compressão (menor é melhor).}
+  \caption{Texto \textit{Alice}: taxa de compressão.}
   \label{fig:komm-alice-compression}
   \includegraphics[width=15cm]{figuras/komm_alice_compression.png}
   \fonte{Elaborada pelo autor.}
@@ -97,7 +97,7 @@ disponíveis na biblioteca.
 
 \begin{figure}[htp]
   \centering
-  \caption{Imagem \textit{smiley}: taxa de compressão (menor é melhor).}
+  \caption{Imagem \textit{smiley}: taxa de compressão.}
   \label{fig:komm-smiley-compression}
   \includegraphics[width=15cm]{figuras/komm_smiley_compression.png}
   \fonte{Elaborada pelo autor.}
@@ -121,7 +121,7 @@ disponíveis na biblioteca.
 
 \begin{figure}[htp]
   \centering
-  \caption{Imagem \textit{snail}: taxa de compressão (menor é melhor).}
+  \caption{Imagem \textit{snail}: taxa de compressão.}
   \label{fig:komm-snail-compression}
   \includegraphics[width=15cm]{figuras/komm_snail_compression.png}
   \fonte{Elaborada pelo autor.}
@@ -193,7 +193,7 @@ uma configuração de referência com \(W=64\,\text{kB}\).
 
 \begin{figure}[htp]
   \centering
-  \caption{Texto \textit{Alice}: taxa de compressão (menor é melhor).}
+  \caption{Texto \textit{Alice}: taxa de compressão.}
   \label{fig:external-alice-compression}
   \includegraphics[width=15cm]{figuras/lz77_alice_compression_window.png}
   \fonte{Elaborada pelo autor.}
@@ -227,7 +227,7 @@ uma configuração de referência com \(W=64\,\text{kB}\).
 
 \begin{figure}[htp]
   \centering
-  \caption{Imagem \textit{smiley}: taxa de compressão (menor é melhor).}
+  \caption{Imagem \textit{smiley}: taxa de compressão.}
   \label{fig:external-smiley-compression}
   \includegraphics[width=15cm]{figuras/lz77_smiley_compression_window.png}
   \fonte{Elaborada pelo autor.}
@@ -249,12 +249,35 @@ uma configuração de referência com \(W=64\,\text{kB}\).
   \fonte{Elaborada pelo autor.}
 \end{figure}
 
+\begin{figure}[htp]
+  \centering
+  \caption{Imagem \textit{snail}: taxa de compressão.}
+  \label{fig:external-snail-compression}
+  \includegraphics[width=15cm]{figuras/lz77_snail_compression_window.png}
+  \fonte{Elaborada pelo autor.}
+\end{figure}
+
+\begin{figure}[htp]
+  \centering
+  \caption{Imagem \textit{snail}: memória pico.}
+  \label{fig:external-snail-memory}
+  \includegraphics[width=15cm]{figuras/lz77_snail_memory_window.png}
+  \fonte{Elaborada pelo autor.}
+\end{figure}
+
+\begin{figure}[htp]
+  \centering
+  \caption{Imagem \textit{snail}: tempo de compressão.}
+  \label{fig:external-snail-time}
+  \includegraphics[width=15cm]{figuras/lz77_snail_time_window.png}
+  \fonte{Elaborada pelo autor.}
+\end{figure}
+
 \noindent\textbf{Análise (imagens):}
 \begin{itemize}
-  \item A implementação da \textit{Komm} superou as versões externas em taxa de
-        compressão, principalmente para janelas maiores.
-  \item O \textit{FastLZ} manteve vantagem em tempo de execução, mas com menor
-        eficiência de compressão.
+  \item A implementação da \textit{Komm} competitiva comparada as implementações externas em relação a taxa de
+        compressão.
+  \item O \textit{FastLZ} na sua grande maioria.
   \item O \textit{LZ77-Compressor} exibiu desempenho inferior em tempo e memória,
         refletindo limitações inerentes à implementação em Python puro.
 \end{itemize}
@@ -270,7 +293,7 @@ dominar em desempenho absoluto.
 Apesar disso, a versão implementada na \textit{Komm} mostrou-se competitiva,
 validando a adequação da arquitetura modular proposta e seu potencial como
 ferramenta educacional e de pesquisa. Todos os testes preservaram a integridade
-dos dados (\emph{round trip} verdadeiro).
+dos dados.
 
 \subsection{Diferenças entre as implementações em C e Komm}
 
@@ -302,8 +325,7 @@ Em síntese, a diferença observada decorre de dois fatores principais:
 \end{enumerate}
 
 Essas diferenças justificam tanto a melhor taxa de compressão do
-\textit{FastLZ} (55\% no texto e 19\% na imagem \textit{snail}) quanto seu
-tempo de execução reduzido (milissegundos contra dezenas de segundos na versão
+\textit{FastLZ} quanto seu tempo de execução reduzido (milissegundos contra dezenas de segundos na versão
 em Python). Contudo, a implementação na \textit{Komm} apresenta maior
 transparência conceitual e modularidade, sendo mais adequada para ensino,
 extensão e análise experimental do algoritmo.
